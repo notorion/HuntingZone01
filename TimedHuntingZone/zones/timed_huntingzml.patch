@@ -1,0 +1,40 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_11.3_Shinemaker
+diff --git dist/game/data/zones/timed_hunting.xml dist/game/data/zones/timed_hunting.xml
+index 1118491..26b5a80 100644
+--- dist/game/data/zones/timed_hunting.xml
++++ dist/game/data/zones/timed_hunting.xml
+@@ -198,4 +198,32 @@
+ 		<stat name="instanceId" val="1020" />
+ 		<node X="114611" Y="116091" />
+ 	</zone>
++	<zone name="Catacombs_of_the_Apostate_110" type="TimedHuntingZone"  shape="NPoly" minZ="-15500" maxZ="-13500"> 
++		<stat name="instanceId" val="1016" />
++		<node X="108799" Y="-251736" />
++		<node X="120520" Y="-252451" />
++		<node X="121513" Y="-240111" />
++		<node X="107426" Y="-239469" />
++	</zone>
++	<zone name="The_Patriots_Necropolis_115" type="TimedHuntingZone"  shape="NPoly" minZ="-15500" maxZ="-13500"> 
++		<stat name="instanceId" val="1016" />
++		<node X="108635" Y="-219023" />
++		<node X="121143" Y="-219559" />
++		<node X="121277" Y="-207586" />
++		<node X="108995" Y="-206940" />
++	</zone>
++	<zone name="Catacombs_of_the_Forbidden_Path_120" type="TimedHuntingZone"  shape="NPoly" minZ="-6700" maxZ="-5000"> 
++		<stat name="instanceId" val="1016" />
++		<node X="108461" Y="-252366" />
++		<node X="120944" Y="-252478" />
++		<node X="121483" Y="-239419" />
++		<node X="108780" Y="-239248" />
++	</zone>
++	<zone name="The_Saints_Necropolis_125" type="TimedHuntingZone"  shape="NPoly" minZ="-6700" maxZ="-5000"> 
++		<stat name="instanceId" val="1016" />
++		<node X="108442" Y="-219034" />
++		<node X="121035" Y="-219254" />
++		<node X="121233" Y="-206796" />
++		<node X="108104" Y="-206572" />
++	</zone>
+ </list>
+\ No newline at end of file

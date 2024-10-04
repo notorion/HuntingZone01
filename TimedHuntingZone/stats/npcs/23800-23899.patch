@@ -1,0 +1,500 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_11.3_Shinemaker
+diff --git dist/game/data/stats/npcs/23800-23899.xml dist/game/data/stats/npcs/23800-23899.xml
+index a97a892..5a648b7 100644
+--- dist/game/data/stats/npcs/23800-23899.xml
++++ dist/game/data/stats/npcs/23800-23899.xml
+@@ -879,19 +879,24 @@
+ 		</dropLists>
+ 	</npc>
+ 	<npc id="23818" level="115" type="Monster" name="Nephilim Priest">
+-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+-		<race>DIVINE</race>
+-		<sex>MALE</sex>
+-		<acquire exp="1198928" sp="1079" />
+-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+-			<vitals hp="595748" hpRegen="12.9" mp="2983" mpRegen="30" />
+-			<attack physical="1066143" magical="97169" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+-			<defence physical="334773" magical="165198" />
++    <!-- AUTO GENERATED NPC TODO: FIX IT -->
++        <race>DIVINE</race>
++        <sex>MALE</sex>
++        <acquire exp="1198928" sp="1079" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
++        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
++        <vitals hp="595748" hpRegen="12.9" mp="2983" mpRegen="30" />
++        <attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="50" />
+ 				<run ground="140" />
+ 			</speed>
+ 			<hitTime>600</hitTime>
++			<attribute>
++				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1600" dark="1550" />
++				<attack type="HOLY" value="1450" />
++			</attribute>
+ 		</stats>
+ 		<status attackable="true" />
+ 		<collision>
+@@ -910,22 +915,27 @@
+ 			</drop>
+ 		</dropLists>
+ 	</npc>
+-	<npc id="23819" level="115" type="Monster" name="Nephilim Guard">
++	<npc id="23819" level="115" type="Monster" name="Nephilim Watchman">
+ 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+ 		<race>DIVINE</race>
+ 		<sex>MALE</sex>
+ 		<acquire exp="1198928" sp="1079" />
+-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+-			<vitals hp="595748" hpRegen="12.9" mp="2983" mpRegen="30" />
+-			<attack physical="1066143" magical="97169" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+-			<defence physical="334773" magical="165198" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
++        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
++        <vitals hp="595748" hpRegen="12.9" mp="2983" mpRegen="30" />
++        <attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
++ 			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="65" />
+ 				<run ground="180" />
+ 			</speed>
+ 			<hitTime>600</hitTime>
++			<attribute>
++				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1600" dark="1550" />
++				<attack type="HOLY" value="1450" />
++			</attribute>
+ 		</stats>
+-		<status attackable="true" />
++		<status attackable="true" noSleepMode="false" />
+ 		<collision>
+ 			<radius normal="11" />
+ 			<height normal="32.4" />
+@@ -945,17 +955,21 @@
+ 	<npc id="23820" level="115" type="Monster" name="Nephilim Swordsman">
+ 		<race>HUMANOID</race>
+ 		<sex>MALE</sex>
+-		<equipment rhand="160" />
+ 		<acquire exp="1198928" sp="1079" />
+-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+-			<vitals hp="595748" hpRegen="6.5" mp="2983" mpRegen="2.4" />
+-			<attack physical="1066143" magical="97169" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+-			<defence physical="334773" magical="165198" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
++        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
++        <vitals hp="595748" hpRegen="12.9" mp="2983" mpRegen="30" />
++        <attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="65" />
+ 				<run ground="170" />
+ 			</speed>
+ 			<hitTime>540</hitTime>
++			<attribute>
++				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1600" dark="1550" />
++				<attack type="HOLY" value="1450" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -969,6 +983,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="34742" level="1" /> <!-- Holy Strike -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="11" />
+@@ -986,15 +1001,20 @@
+ 		<sex>MALE</sex>
+ 		<equipment rhand="5791" />
+ 		<acquire exp="1198928" sp="1079" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="595748" hpRegen="7.5" mp="2983" mpRegen="2.7" />
+-			<attack physical="1066143" magical="97169" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+-			<defence physical="334773" magical="165198" />
++			<attack physical="169348" magical="14966" random="5" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="10" width="0" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="49" />
+ 				<run ground="140" />
+ 			</speed>
+ 			<hitTime>910</hitTime>
++			<attribute>
++				<defence fire="1600" water="1600" wind="1600" earth="1600" holy="1600" dark="1550" />
++				<attack type="HOLY" value="1450" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1007,7 +1027,7 @@
+ 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+-			<skill id="4415" level="9" /> <!-- Bow -->
++			<skill id="34735" level="1" /> <!-- Smash of Giants -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="10" />
+@@ -1023,17 +1043,21 @@
+ 	<npc id="23822" level="120" type="Monster" name="Lilim's Magus">
+ 		<race>HUMANOID</race>
+ 		<sex>MALE</sex>
+-		<equipment rhand="160" />
+ 		<acquire exp="3204174" sp="2884" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="1312389" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="50" />
+ 				<run ground="140" />
+ 			</speed>
+ 			<hitTime>280</hitTime>
++			<attribute>
++				<defence fire="1900" water="1900" wind="1900" earth="1900" holy="1850" dark="1900" />
++				<attack type="DARK" value="1750" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1047,6 +1071,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
++			<skill id="34744" level="1" /> <!-- Unholy Energy Bomb -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="8" />
+@@ -1065,15 +1090,20 @@
+ 		<sex>MALE</sex>
+ 		<equipment rhand="234" />
+ 		<acquire exp="3204174" sp="2884" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="1312389" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="36" />
+ 				<run ground="190" />
+ 			</speed>
+ 			<hitTime>300</hitTime>
++			<attribute>
++				<defence fire="1900" water="1900" wind="1900" earth="1900" holy="1850" dark="1900" />
++				<attack type="DARK" value="1750" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1100,20 +1130,25 @@
+ 			</drop>
+ 		</dropLists>
+ 	</npc>
+-	<npc id="23824" level="120" type="Monster" name="Lilim's Guard">
++	<npc id="23824" level="120" type="Monster" name="Lilim's Guardian">
+ 		<race>HUMANOID</race>
+ 		<sex>MALE</sex>
+ 		<equipment rhand="5800" />
+ 		<acquire exp="3204174" sp="2884" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="1312389" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="56" />
+ 				<run ground="180" />
+ 			</speed>
+ 			<hitTime>510</hitTime>
++			<attribute>
++				<defence fire="1900" water="1900" wind="1900" earth="1900" holy="1850" dark="1900" />
++				<attack type="DARK" value="1750" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1127,6 +1162,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="34746" level="1" /> <!-- Unholy Slash -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="11" />
+@@ -1145,15 +1181,20 @@
+ 		<sex>MALE</sex>
+ 		<equipment rhand="5795" />
+ 		<acquire exp="3204174" sp="2884" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="1312389" hpRegen="6.5" mp="3190" mpRegen="2.4" />
+-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="53" />
+ 				<run ground="140" />
+ 			</speed>
+ 			<hitTime>520</hitTime>
++			<attribute>
++				<defence fire="1900" water="1900" wind="1900" earth="1900" holy="1850" dark="1900" />
++				<attack type="DARK" value="1750" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1167,6 +1208,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="34739" level="1" /> <!-- Lith Smash -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="15" />
+@@ -1183,17 +1225,21 @@
+ 	<npc id="23826" level="125" type="Monster" name="Nephilim Bishop">
+ 		<race>DIVINE</race>
+ 		<sex>MALE</sex>
+-		<equipment rhand="279" />
+ 		<acquire exp="4179713" sp="3762" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="3004509" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="5" critical="8" accuracy="0" attackSpeed="253" type="BOW" range="1100" distance="10" width="0" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="5" critical="8" accuracy="0" attackSpeed="253" type="BLUNT" range="40" distance="10" width="0" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="50" />
+ 				<run ground="140" />
+ 			</speed>
+ 			<hitTime>910</hitTime>
++			<attribute>
++				<defence fire="2350" water="2350" wind="2350" earth="2350" holy="2350" dark="2300" />
++				<attack type="HOLY" value="2200" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1206,7 +1252,7 @@
+ 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+-			<skill id="4415" level="9" /> <!-- Bow -->
++			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="21" />
+@@ -1221,20 +1267,24 @@
+ 			</drop>
+ 		</dropLists>
+ 	</npc>
+-	<npc id="23827" level="125" type="Monster" name="Nephilim Royal Guard">
++	<npc id="23827" level="125" type="Monster" name="Nephilim Guardsman">
+ 		<race>DIVINE</race>
+ 		<sex>MALE</sex>
+-		<equipment rhand="160" />
+ 		<acquire exp="4179713" sp="3762" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="3004509" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="65" />
+ 				<run ground="180" />
+ 			</speed>
+ 			<hitTime>340</hitTime>
++			<attribute>
++				<defence fire="2350" water="2350" wind="2350" earth="2350" holy="2350" dark="2300" />
++				<attack type="HOLY" value="2200" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1265,17 +1315,21 @@
+ 	<npc id="23828" level="125" type="Monster" name="Nephilim Commander">
+ 		<race>DIVINE</race>
+ 		<sex>MALE</sex>
+-		<equipment rhand="2503" />
+ 		<acquire exp="4179713" sp="3762" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="3004509" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="65" />
+ 				<run ground="170" />
+ 			</speed>
+ 			<hitTime>280</hitTime>
++			<attribute>
++				<defence fire="2350" water="2350" wind="2350" earth="2350" holy="2350" dark="2300" />
++				<attack type="HOLY" value="2200" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1289,6 +1343,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapon -->
++			<skill id="34742" level="1" /> <!-- Holy Strike -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="13" />
+@@ -1308,15 +1363,20 @@
+ 		<sex>MALE</sex>
+ 		<equipment rhand="5793" />
+ 		<acquire exp="4179713" sp="3762" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="3004509" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="49" />
+ 				<run ground="130" />
+ 			</speed>
+ 			<hitTime>560</hitTime>
++			<attribute>
++				<defence fire="2350" water="2350" wind="2350" earth="2350" holy="2350" dark="2300" />
++				<attack type="HOLY" value="2200" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1330,6 +1390,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="34743" level="1" /> <!-- Punch of Giants -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="10" />
+@@ -1347,17 +1408,21 @@
+ 	<npc id="23830" level="130" type="Monster" name="Lillim's Great Magus">
+ 		<race>UNDEAD</race>
+ 		<sex>MALE</sex>
+-		<equipment rhand="84" />
+ 		<acquire exp="5470337" sp="4923" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="7050334" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="50" />
+ 				<run ground="140" />
+ 			</speed>
+ 			<hitTime>170</hitTime>
++			<attribute>
++				<defence fire="2500" water="2500" wind="2500" earth="2500" holy="2600" dark="2500" />
++				<attack type="DARK" value="2500" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1371,6 +1436,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="34736" level="1" /> <!-- Unholy Energy Bomb -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="10" />
+@@ -1387,17 +1453,21 @@
+ 	<npc id="23831" level="130" type="Monster" name="Lilim's Assassin">
+ 		<race>UNDEAD</race>
+ 		<sex>MALE</sex>
+-		<equipment rhand="236" lhand="236" />
+ 		<acquire exp="5470337" sp="4923" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="7050334" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="36" />
+ 				<run ground="190" />
+ 			</speed>
+ 			<hitTime>520</hitTime>
++			<attribute>
++				<defence fire="2500" water="2500" wind="2500" earth="2500" holy="2600" dark="2500" />
++				<attack type="DARK" value="2500" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1411,6 +1481,7 @@
+ 			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+ 			<skill id="4414" level="2" /> <!-- Standard Type -->
+ 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="34737" level="1" /> <!-- Unholy Blast -->
+ 		</skillList>
+ 		<collision>
+ 			<radius normal="13" />
+@@ -1424,20 +1495,25 @@
+ 			</drop>
+ 		</dropLists>
+ 	</npc>
+-	<npc id="23832" level="130" type="Monster" name="Lillim's Royal Knight">
++	<npc id="23832" level="130" type="Monster" name="Lillim's Troop Knight">
+ 		<race>UNDEAD</race>
+ 		<sex>MALE</sex>
+ 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Monster Only (Nephilim Lord) -->
+ 		<acquire exp="5470337" sp="4923" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="7050334" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="56" />
+ 				<run ground="180" />
+ 			</speed>
+ 			<hitTime>600</hitTime>
++			<attribute>
++				<defence fire="2500" water="2500" wind="2500" earth="2500" holy="2600" dark="2500" />
++				<attack type="DARK" value="2500" />
++			</attribute>
+ 			<abnormalResist physical="0" magical="0" />
+ 		</stats>
+ 		<status attackable="true" passableDoor="true" />
+@@ -1469,10 +1545,11 @@
+ 		<sex>MALE</sex>
+ 		<equipment rhand="5797" /> <!-- Tomb Savant A -->
+ 		<acquire exp="5470337" sp="4923" />
++        <mpReward value="11" type="PER" ticks="5" affects="PARTY" />
+ 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+ 			<vitals hp="7050334" hpRegen="7.5" mp="3190" mpRegen="2.7" />
+-			<attack physical="1599215" magical="145753" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+-			<defence physical="753240" magical="364523" />
++			<attack physical="169348" magical="14966" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
++			<defence physical="5509" magical="3605" />
+ 			<speed>
+ 				<walk ground="25" />
+ 				<run ground="130" />

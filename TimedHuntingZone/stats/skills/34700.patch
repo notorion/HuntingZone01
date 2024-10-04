@@ -1,0 +1,386 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_11.3_Shinemaker
+diff --git dist/game/data/stats/skills/34700-34799.xml dist/game/data/stats/skills/34700-34799.xml
+index 28e35e8..d8cdb5b 100644
+--- dist/game/data/stats/skills/34700-34799.xml
++++ dist/game/data/stats/skills/34700-34799.xml
+@@ -1413,140 +1413,341 @@
+ 		<!-- Deals M. damage to a single target. -->
+ 		<icon>icon.skill1148</icon>
+ 		<operateType>A1</operateType>
+-		<isMagic>1</isMagic> <!-- Magic Skill -->
+-		<castRange>40</castRange>
++		<isMagic>1</isMagic> 
++		<castRange>500</castRange>
+ 		<hitTime>500</hitTime>
+ 		<coolTime>500</coolTime>
+-		<reuseDelay>500</reuseDelay>
++		<reuseDelay>6000</reuseDelay>
+ 		<effectPoint>-100</effectPoint>
++		<basicProperty>PHYSICAL</basicProperty>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="MagicalAttack">
++				<power>
++					<value level="7">400</value>
++				</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34733" toLevel="1" name="Sacred Smash">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<effectPoint>-136</effectPoint>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34734" toLevel="1" name="Holy Strike">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1500</hitTime>
+ 		<coolTime>500</coolTime>
+-		<reuseDelay>6000</reuseDelay>
+-		<effectPoint>-100</effectPoint>
++		<effectPoint>-687</effectPoint>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>2200</attributeValue>
++		<isMagic>1</isMagic>
++		<magicLevel>100</magicLevel>
++		<reuseDelay>1200</reuseDelay>
++		<magicCriticalRate>5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34735" toLevel="1" name="Smash of Giants">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
+-		<hitTime>1500</hitTime>
++		<castRange>500</castRange>
++		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<reuseDelay>6000</reuseDelay>
+ 		<effectPoint>-100</effectPoint>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<magicLevel>99</magicLevel>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>400</attributeValue>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34736" toLevel="1" name="Unholy Energy Bomb">
+ 		<!-- Deals M. damage to a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+ 		<effectPoint>-100</effectPoint>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<magicLevel>99</magicLevel>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>400</attributeValue>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="MagicalAttack">
++				<power>
++					<value level="7">800</value>
++				</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34737" toLevel="1" name="Unholy Blast">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<reuseDelay>6000</reuseDelay>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>400</attributeValue>
++		<effectPoint>-372</effectPoint>
++		<magicLevel>100</magicLevel>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34738" toLevel="1" name="Unholy Slash">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<reuseDelay>6000</reuseDelay>
++		<effectPoint>-372</effectPoint>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>400</attributeValue>
++		<magicLevel>100</magicLevel>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<affectObject>NOT_FRIEND</affectObject>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34739" toLevel="1" name="Lith Smash">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<reuseDelay>6000</reuseDelay>
++		<effectPoint>-372</effectPoint>
++		<magicLevel>100</magicLevel>
++		<attributeType>DARK</attributeType>
++		<attributeValue>1750</attributeValue>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34740" toLevel="1" name="Sacred Energy Bomb">
+ 		<!-- Deals M. damage to a single target. -->
+ 		<icon>icon.skill1148</icon>
+ 		<operateType>A1</operateType>
+ 		<isMagic>1</isMagic> <!-- Magic Skill -->
+-		<castRange>40</castRange>
+ 		<hitTime>500</hitTime>
+ 		<coolTime>500</coolTime>
+-		<reuseDelay>500</reuseDelay>
+-		<effectPoint>-100</effectPoint>
++		<reuseDelay>6000</reuseDelay>
++		<castRange>500</castRange>
++		<effectPoint>-136</effectPoint>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="MagicalAttack">
++				<power>800</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34741" toLevel="1" name="Sacred Smash">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
+-		<hitTime>1000</hitTime>
++		<hitTime>500</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<reuseDelay>6000</reuseDelay>
++		<castRange>500</castRange>
++		<effectPoint>-136</effectPoint>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<hitCancelTime>0</hitCancelTime>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34742" toLevel="1" name="Holy Strike">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1500</hitTime>
+ 		<coolTime>500</coolTime>
+-		<reuseDelay>6000</reuseDelay>
+-		<effectPoint>-100</effectPoint>
++		<effectPoint>-687</effectPoint>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>2200</attributeValue>
++		<isMagic>1</isMagic> 
++		<magicLevel>100</magicLevel>
++		<reuseDelay>1200</reuseDelay>
++		<magicCriticalRate>5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34743" toLevel="1" name="Punch of Giants">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
+-		<hitTime>1500</hitTime>
++		<castRange>500</castRange>
++		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<reuseDelay>6000</reuseDelay>
+-		<effectPoint>-100</effectPoint>
++		<effectPoint>-372</effectPoint>
++		<magicLevel>100</magicLevel>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34744" toLevel="1" name="Unholy Energy Bomb">
+ 		<!-- Deals M. damage to a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<effectPoint>-372</effectPoint>
++		<attributeType>DARK</attributeType>
++		<attributeValue>1750</attributeValue>
++		<magicLevel>100</magicLevel>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="MagicalAttack">
++				<power>600</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34745" toLevel="1" name="Unholy Blast">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<effectPoint>-372</effectPoint>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>1750</attributeValue>
++		<magicLevel>100</magicLevel>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34746" toLevel="1" name="Unholy Slash">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
++		<castRange>500</castRange>
+ 		<hitTime>1000</hitTime>
+ 		<coolTime>500</coolTime>
+-		<effectPoint>-100</effectPoint>
++		<effectPoint>-372</effectPoint>
++		<attributeType>HOLY</attributeType>
++		<attributeValue>1750</attributeValue>
++		<magicLevel>100</magicLevel>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34747" toLevel="1" name="Lith Blow">
+ 		<!-- Inflicts P. damage on a single target. -->
++		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>40</castRange>
+ 		<hitTime>1500</hitTime>
+ 		<coolTime>500</coolTime>
+ 		<reuseDelay>6000</reuseDelay>
+ 		<effectPoint>-100</effectPoint>
++		<castRange>500</castRange>
++		<effectPoint>-372</effectPoint>
++		<magicLevel>100</magicLevel>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<nextAction>ATTACK</nextAction>
++		<effects>
++			<effect name="PhysicalAttack">
++				<power>400</power>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="34748" toLevel="1" name="Hour of Penitence">
+ 		<!-- Allows you to repent your sins while hunting for a certain time. -->

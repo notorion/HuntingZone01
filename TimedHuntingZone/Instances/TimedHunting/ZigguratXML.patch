@@ -1,0 +1,1422 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_11.3_Shinemaker
+diff --git dist/game/data/instances/TimedHunting/Ziggurat.xml dist/game/data/instances/TimedHunting/Ziggurat.xml
+new file mode 100644
+index 0000000..cada822
+--- /dev/null
++++ dist/game/data/instances/TimedHunting/Ziggurat.xml
+@@ -0,0 +1,1413 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<instance id="1016" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
++	<locations>
++		<enter type="FIXED">
++			<location x="110217" y="-245613" z="-14809" />
++		</enter>
++		<exit type="ORIGIN" />
++	</locations>
++	<conditions>
++		<condition type="Level">
++			<param name="min" value="110" />
++			<param name="max" value="199" />
++		</condition>
++	</conditions>
++	<reenter apply="ON_ENTER">
++		<reset day="THURSDAY" hour="6" minute="30" />
++	</reenter>
++	<spawnlist>
++		<!-- NPC -->
++		<group name="NPCsRift">
++			<npc id="34694" x="109663" y="-217404" z="-15200" heading="33807" respawnTime="25sec" chaseRange="950" /> <!-- Gatekeeper Ziggurat Lv 110 -->
++			<npc id="34695" x="110043" y="-245528" z="-14827" heading="64930" respawnTime="25sec" chaseRange="950" /> <!-- Ivory Tower Researcher - Time Rift -->
++			<npc id="34694" x="110239" y="-245510" z="-14827" heading="4836" respawnTime="25sec" chaseRange="950" /> <!-- Gatekeeper Ziggurat Lv 115-->
++			<npc id="34695" x="109672" y="-217573" z="-15200" heading="64930" respawnTime="25sec" chaseRange="950" /> <!-- Ivory Tower Researcher - Time Rift -->
++			<npc id="34694" x="109196" y="-251607" z="-6509" heading="4836" respawnTime="25sec" chaseRange="950" /> <!-- Gatekeeper Ziggurat Lv 120 -->
++			<npc id="34695" x="109196" y="-251457" z="-6509" heading="64930" respawnTime="25sec" chaseRange="950" /> <!-- Ivory Tower Researcher - Time Rift -->
++			<npc id="34694" x="109218" y="-212728" z="-5681" heading="4836" respawnTime="25sec" chaseRange="950" /> <!-- Gatekeeper Ziggurat Lv 125 -->
++			<npc id="34695" x="109215" y="-212881" z="-5681" heading="64930" respawnTime="25sec" chaseRange="950" /> <!-- Ivory Tower Researcher - Time Rift -->
++		</group>
++		<!-- Group Level 110 -->
++		<group name="MobsRift" spawnByDefault="true">
++			<npc id="23818" x="109232" y="-246883" z="-14827" heading="49151" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="109232" y="-246883" z="-14827" heading="49151" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="109211" y="-246969" z="-14827" heading="46653" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="109211" y="-247027" z="-14827" heading="49216" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="109209" y="-247232" z="-14827" heading="49019" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="109209" y="-247245" z="-14827" heading="46287" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="109138" y="-247497" z="-14829" heading="46287" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="109138" y="-247497" z="-14829" heading="46287" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="109218" y="-247728" z="-14827" heading="52643" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="109218" y="-247727" z="-14827" heading="52643" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="109349" y="-247755" z="-14829" heading="63339" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="109349" y="-247755" z="-14829" heading="63339" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="111226" y="-246713" z="-14827" heading="31728" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="111295" y="-246711" z="-14827" heading="302" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="111295" y="-246711" z="-14827" heading="302" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="111295" y="-246711" z="-14827" heading="302" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="111522" y="-246742" z="-14827" heading="64122" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="111581" y="-246750" z="-14827" heading="64653" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="111805" y="-246769" z="-14827" heading="64653" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="111860" y="-246751" z="-14827" heading="3084" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="111933" y="-246730" z="-14827" heading="3084" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="111933" y="-246730" z="-14827" heading="3084" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="111896" y="-246769" z="-14827" heading="41234" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="111896" y="-246769" z="-14827" heading="41234" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="113340" y="-246959" z="-14827" heading="11254" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="113334" y="-247187" z="-14827" heading="48883" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="113315" y="-247326" z="-14827" heading="46111" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="113296" y="-247390" z="-14827" heading="46111" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="113411" y="-247496" z="-14827" heading="57768" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="113374" y="-247560" z="-14827" heading="43684" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="113374" y="-247560" z="-14827" heading="43684" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="113309" y="-247674" z="-14827" heading="43746" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="113309" y="-247674" z="-14827" heading="43746" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="113333" y="-247784" z="-14827" heading="51392" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="113333" y="-247784" z="-14827" heading="51392" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="112433" y="-248796" z="-14827" heading="867" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="112040" y="-248788" z="-14827" heading="32561" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="112232" y="-248800" z="-14827" heading="60121" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="112232" y="-248800" z="-14827" heading="60121" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="112017" y="-248721" z="-14827" heading="29095" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="112017" y="-248721" z="-14827" heading="29095" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="111844" y="-248790" z="-14827" heading="36726" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="111615" y="-248786" z="-14827" heading="32628" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="111544" y="-248786" z="-14827" heading="32628" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="111544" y="-248786" z="-14827" heading="32628" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="111447" y="-248905" z="-14829" heading="42018" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="111447" y="-248905" z="-14829" heading="42018" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="112062" y="-248648" z="-14829" heading="2500" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="112062" y="-248648" z="-14829" heading="2500" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="109218" y="-249350" z="-14827" heading="49318" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="109209" y="-249522" z="-14827" heading="48639" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="109206" y="-249594" z="-14827" heading="48639" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="109168" y="-249795" z="-14827" heading="47203" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="109150" y="-249970" z="-14827" heading="48101" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="109149" y="-249983" z="-14827" heading="48101" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="109149" y="-249983" z="-14827" heading="48101" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="109297" y="-250186" z="-14827" heading="55722" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="109297" y="-250186" z="-14827" heading="55722" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="109241" y="-250267" z="-14827" heading="42842" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="109241" y="-250267" z="-14827" heading="42842" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="110564" y="-251375" z="-14827" heading="46531" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="110627" y="-251368" z="-14827" heading="46531" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="110706" y="-251289" z="-14827" heading="5679" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="110764" y="-251350" z="-14827" heading="64703" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="110948" y="-251482" z="-14829" heading="55980" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="110948" y="-251482" z="-14829" heading="3588" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="111188" y="-251396" z="-14827" heading="3588" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="111248" y="-251290" z="-14827" heading="10958" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23820" x="111410" y="-251452" z="-14827" heading="57119" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="111410" y="-251452" z="-14827" heading="57119" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="111469" y="-251272" z="-14829" heading="13080" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="111469" y="-251272" z="-14829" heading="13080" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="112158" y="-250350" z="-14827" heading="32462" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="112334" y="-250374" z="-14827" heading="64110" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="112347" y="-250376" z="-14827" heading="64110" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="112347" y="-250376" z="-14827" heading="64110" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="112654" y="-250377" z="-14827" heading="65502" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="112730" y="-250303" z="-14827" heading="8052" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="112730" y="-250303" z="-14827" heading="8052" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="112854" y="-250387" z="-14827" heading="59325" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="112854" y="-250387" z="-14827" heading="59325" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="112912" y="-250375" z="-14827" heading="1977" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="112953" y="-250368" z="-14827" heading="1977" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="112953" y="-250368" z="-14827" heading="1977" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="116144" y="-251748" z="-14827" heading="29211" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="116144" y="-251748" z="-14827" heading="29211" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23818" x="116100" y="-251853" z="-14829" heading="27458" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="116100" y="-251853" z="-14829" heading="1259" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23819" x="116339" y="-251824" z="-14827" heading="1259" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="116429" y="-251732" z="-14827" heading="8306" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="116429" y="-251732" z="-14827" heading="8306" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="116486" y="-251732" z="-14827" heading="65475" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="116600" y="-251733" z="-14827" heading="65475" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="116657" y="-251731" z="-14827" heading="239" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="116774" y="-251729" z="-14827" heading="239" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="116774" y="-251729" z="-14827" heading="239" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="115855" y="-249820" z="-14827" heading="16055" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="115855" y="-249820" z="-14827" heading="16055" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="115937" y="-249643" z="-14827" heading="11858" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="115876" y="-249510" z="-14827" heading="20869" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="115876" y="-249510" z="-14827" heading="20869" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="115894" y="-249309" z="-14827" heading="15452" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23820" x="115892" y="-249110" z="-14827" heading="16488" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="115949" y="-248932" z="-14827" heading="13089" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="115942" y="-248957" z="-14827" heading="13089" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="115913" y="-248840" z="-14827" heading="18884" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="115896" y="-249242" z="-14827" heading="26034" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="115934" y="-249195" z="-14827" heading="9292" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23818" x="117077" y="-247640" z="-14827" heading="64529" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="117077" y="-247640" z="-14827" heading="64529" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="116904" y="-247678" z="-14827" heading="35023" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="116789" y="-247639" z="-14827" heading="29357" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="116789" y="-247639" z="-14827" heading="29357" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="116696" y="-247707" z="-14827" heading="39395" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="116610" y="-247771" z="-14829" heading="39395" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="116481" y="-247653" z="-14827" heading="25075" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="116446" y="-247622" z="-14827" heading="25075" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="116446" y="-247622" z="-14827" heading="36827" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="116307" y="-247679" z="-14827" heading="36827" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="116307" y="-247679" z="-14827" heading="36827" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="119491" y="-247809" z="-14827" heading="14750" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="119491" y="-247809" z="-14827" heading="14750" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="119459" y="-247974" z="-14827" heading="47153" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="119559" y="-248115" z="-14827" heading="55586" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="119598" y="-248170" z="-14829" heading="55586" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="119531" y="-248329" z="-14827" heading="45034" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="119503" y="-248398" z="-14827" heading="45034" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="119540" y="-248505" z="-14827" heading="52690" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="119600" y="-248672" z="-14828" heading="52690" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="119495" y="-248716" z="-14827" heading="38779" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="119433" y="-248757" z="-14827" heading="38779" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="119433" y="-248757" z="-14827" heading="38779" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="117928" y="-249765" z="-14827" heading="12984" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="117907" y="-249528" z="-14827" heading="17284" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="117908" y="-249534" z="-14827" heading="17284" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="117972" y="-249462" z="-14827" heading="8804" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="117972" y="-249462" z="-14827" heading="8804" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="117867" y="-249200" z="-14827" heading="20352" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="117845" y="-249145" z="-14827" heading="20352" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="117977" y="-249004" z="-14827" heading="5053" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="117974" y="-249007" z="-14827" heading="5053" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="117974" y="-249007" z="-14827" heading="5053" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="118045" y="-248800" z="-14829" heading="12937" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="117958" y="-248721" z="-14827" heading="25120" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="114852" y="-246634" z="-14827" heading="16985" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="114872" y="-246513" z="-14827" heading="14634" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="114873" y="-246510" z="-14827" heading="14634" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="114873" y="-246510" z="-14827" heading="17932" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="114841" y="-246296" z="-14827" heading="17932" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="114889" y="-246091" z="-14827" heading="13984" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="114889" y="-246091" z="-14827" heading="13984" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="114833" y="-245989" z="-14827" heading="21584" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="114791" y="-245911" z="-14827" heading="21584" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="114875" y="-245704" z="-14827" heading="12363" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="114875" y="-245704" z="-14827" heading="12363" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="114875" y="-245704" z="-14827" heading="12363" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="114870" y="-242123" z="-14827" heading="48685" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="114870" y="-242123" z="-14827" heading="48685" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="114882" y="-241936" z="-14827" heading="15715" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="114882" y="-241936" z="-14827" heading="15715" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="114815" y="-241875" z="-14827" heading="25064" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="114898" y="-241735" z="-14827" heading="10802" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="114898" y="-241735" z="-14827" heading="10802" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="114852" y="-241602" z="-14827" heading="19857" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="114852" y="-241602" z="-14827" heading="19857" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="114969" y="-241432" z="-14829" heading="10096" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="114969" y="-241432" z="-14829" heading="10096" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="114825" y="-241318" z="-14827" heading="25797" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="116611" y="-241799" z="-14827" heading="182" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="116611" y="-241799" z="-14827" heading="182" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="116667" y="-241753" z="-14827" heading="7172" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="116796" y="-241808" z="-14827" heading="61332" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="116796" y="-241808" z="-14827" heading="61332" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="116949" y="-241799" z="-14827" heading="612" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="116949" y="-241799" z="-14827" heading="612" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="117095" y="-241868" z="-14827" heading="60931" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="117095" y="-241868" z="-14827" heading="60931" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="117249" y="-241791" z="-14827" heading="4797" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="117313" y="-241760" z="-14827" heading="4797" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="117423" y="-241878" z="-14827" heading="56978" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="118174" y="-240784" z="-14827" heading="315" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="118340" y="-240801" z="-14827" heading="64471" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="118340" y="-240801" z="-14827" heading="64471" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="118465" y="-240874" z="-14827" heading="60022" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="118594" y="-240819" z="-14827" heading="4203" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="118750" y="-240725" z="-14827" heading="5595" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="118742" y="-240731" z="-14827" heading="5595" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="118966" y="-240808" z="-14827" heading="62081" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="118963" y="-240807" z="-14827" heading="62081" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="119019" y="-240816" z="-14827" heading="63813" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="119186" y="-240764" z="-14827" heading="10151" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="119186" y="-240764" z="-14827" heading="10151" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="120512" y="-242686" z="-14827" heading="15967" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="120512" y="-242686" z="-14827" heading="15967" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="120496" y="-242551" z="-14827" heading="17614" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="120525" y="-242501" z="-14827" heading="10706" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="120588" y="-242399" z="-14827" heading="10706" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="120530" y="-242240" z="-14827" heading="20032" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="120530" y="-242240" z="-14827" heading="20032" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="120439" y="-242164" z="-14827" heading="25478" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="120525" y="-242085" z="-14827" heading="4688" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="120529" y="-242026" z="-14827" heading="15529" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="120536" y="-241951" z="-14827" heading="15529" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="120536" y="-241951" z="-14827" heading="15529" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="118397" y="-243360" z="-14827" heading="37533" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="118397" y="-243360" z="-14827" heading="37533" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="118314" y="-243329" z="-14827" heading="29039" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="118178" y="-243357" z="-14827" heading="34885" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="118178" y="-243357" z="-14827" heading="34885" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="118006" y="-243339" z="-14827" heading="31680" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23820" x="117867" y="-243291" z="-14827" heading="29299" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="117710" y="-243324" z="-14827" heading="34928" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="117710" y="-243324" z="-14827" heading="34928" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="117653" y="-243337" z="-14827" heading="35214" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="116399" y="-244243" z="-14827" heading="15910" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="116399" y="-244243" z="-14827" heading="15910" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="116440" y="-244268" z="-14827" heading="59824" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="116340" y="-244347" z="-14827" heading="39741" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="116435" y="-244442" z="-14827" heading="57343" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="116407" y="-244625" z="-14827" heading="47617" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="116411" y="-244604" z="-14827" heading="47617" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="116486" y="-244755" z="-14827" heading="53960" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="116486" y="-244755" z="-14827" heading="53960" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="116486" y="-244755" z="-14827" heading="44815" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="116352" y="-245088" z="-14827" heading="45880" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="116352" y="-245088" z="-14827" heading="45880" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="118422" y="-245425" z="-14827" heading="40634" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="118306" y="-245442" z="-14827" heading="34290" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23818" x="118467" y="-245351" z="-14827" heading="9241" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="118270" y="-245324" z="-14829" heading="31347" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23819" x="118159" y="-245440" z="-14827" heading="41189" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="117985" y="-245457" z="-14827" heading="33835" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="117935" y="-245463" z="-14827" heading="33835" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="117878" y="-245456" z="-14827" heading="31595" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="117749" y="-245442" z="-14827" heading="31595" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="117593" y="-245479" z="-14827" heading="35196" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="117593" y="-245479" z="-14827" heading="35196" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="117593" y="-245479" z="-14827" heading="55906" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="120490" y="-245204" z="-14827" heading="45256" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="120490" y="-245204" z="-14827" heading="45256" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="120505" y="-245119" z="-14827" heading="14562" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="120523" y="-245013" z="-14827" heading="14629" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="120523" y="-245013" z="-14827" heading="14629" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="120533" y="-244841" z="-14827" heading="15778" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="120533" y="-244841" z="-14827" heading="15778" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="120541" y="-244726" z="-14827" heading="15611" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="120550" y="-244612" z="-14827" heading="15611" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="120563" y="-244367" z="-14827" heading="15802" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="120562" y="-244397" z="-14827" heading="15802" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="120522" y="-244353" z="-14827" heading="24104" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="113564" y="-244489" z="-14827" heading="1221" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="113444" y="-244479" z="-14827" heading="31900" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="113265" y="-244480" z="-14827" heading="32878" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="113256" y="-244481" z="-14827" heading="32878" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="113046" y="-244470" z="-14827" heading="32222" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="113046" y="-244470" z="-14827" heading="32222" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="112862" y="-244480" z="-14827" heading="33334" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="112862" y="-244480" z="-14827" heading="33334" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="112737" y="-244530" z="-14827" heading="36736" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="112737" y="-244530" z="-14827" heading="36736" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="112678" y="-244517" z="-14827" heading="30608" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="113906" y="-243391" z="-14827" heading="54393" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="113893" y="-243229" z="-14827" heading="17219" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="113893" y="-243229" z="-14827" heading="17219" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="113939" y="-243075" z="-14827" heading="13356" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="113939" y="-243075" z="-14827" heading="13356" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="113937" y="-242901" z="-14827" heading="16503" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="113937" y="-242901" z="-14827" heading="16503" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="113878" y="-242529" z="-14827" heading="18745" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="113925" y="-242608" z="-14827" heading="54749" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="113884" y="-242502" z="-14827" heading="20233" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23820" x="113884" y="-242502" z="-14827" heading="20233" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="113826" y="-242438" z="-14827" heading="24063" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="110243" y="-244352" z="-14827" heading="11769" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="110304" y="-244178" z="-14827" heading="12831" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="110299" y="-244194" z="-14827" heading="12831" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="110299" y="-244194" z="-14827" heading="28076" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="110183" y="-244138" z="-14827" heading="28076" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="110164" y="-244083" z="-14827" heading="19792" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="110122" y="-243958" z="-14829" heading="19792" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="110252" y="-243763" z="-14827" heading="10227" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="110262" y="-243749" z="-14827" heading="10227" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="110213" y="-243641" z="-14827" heading="20766" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="110199" y="-243608" z="-14827" heading="20766" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="110152" y="-243497" z="-14827" heading="20530" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="109231" y="-242691" z="-14827" heading="14247" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="109255" y="-242504" z="-14827" heading="14997" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="109252" y="-242534" z="-14827" heading="14997" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="109252" y="-242534" z="-14827" heading="14997" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="109349" y="-242417" z="-14829" heading="9163" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="109288" y="-242245" z="-14827" heading="19938" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="109288" y="-242245" z="-14827" heading="19938" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="109198" y="-242146" z="-14827" heading="24079" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23821" x="109198" y="-242146" z="-14827" heading="24079" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="109209" y="-241931" z="-14827" heading="15850" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="109209" y="-241931" z="-14827" heading="15850" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="109136" y="-241832" z="-14829" heading="23011" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="111207" y="-240392" z="-14827" heading="2555" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="111096" y="-240379" z="-14827" heading="31551" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="110964" y="-240386" z="-14827" heading="33320" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="110964" y="-240386" z="-14827" heading="33320" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="110812" y="-240355" z="-14827" heading="30669" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23820" x="110693" y="-240390" z="-14827" heading="35751" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="110541" y="-240395" z="-14827" heading="33110" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="110541" y="-240395" z="-14827" heading="33110" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="110391" y="-240358" z="-14827" heading="30245" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="110645" y="-240421" z="-14827" heading="63000" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="110645" y="-240421" z="-14827" heading="63000" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23818" x="111801" y="-242490" z="-14827" heading="43664" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="111806" y="-242611" z="-14827" heading="49582" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="111806" y="-242611" z="-14827" heading="49582" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="111831" y="-242725" z="-14827" heading="51419" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="111842" y="-242774" z="-14827" heading="51419" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="111801" y="-242944" z="-14827" heading="46693" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="111793" y="-242978" z="-14827" heading="46693" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="111825" y="-243088" z="-14827" heading="52105" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="111848" y="-243167" z="-14827" heading="52105" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="111781" y="-243263" z="-14827" heading="42863" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="111753" y="-243305" z="-14827" heading="42863" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="111799" y="-243415" z="-14827" heading="53283" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23818" x="114846" y="-250091" z="-14827" heading="41394" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23818" x="114912" y="-250157" z="-14827" heading="57343" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Priest -->
++			<npc id="23821" x="114912" y="-250157" z="-14827" heading="57343" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="114782" y="-250279" z="-14827" heading="40682" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23819" x="114777" y="-250285" z="-14827" heading="40682" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="114878" y="-250404" z="-14827" heading="56492" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23821" x="114878" y="-250404" z="-14827" heading="56492" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23821" x="114857" y="-250589" z="-14827" heading="47983" respawnTime="25sec" chaseRange="950" /> <!-- Giant Fighter -->
++			<npc id="23820" x="114860" y="-250564" z="-14827" heading="47983" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23820" x="114860" y="-250564" z="-14827" heading="47983" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Swordsman -->
++			<npc id="23819" x="114813" y="-250713" z="-14827" heading="45964" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<npc id="23819" x="114763" y="-250842" z="-14827" heading="45295" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Watchman -->
++			<!-- Group Level 115 -->
++			<npc id="23823" x="109661" y="-218673" z="-15200" heading="58054" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Butcher -->
++			<npc id="23823" x="109703" y="-218709" z="-15200" heading="58144" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Butcher -->
++			<npc id="23825" x="109898" y="-218644" z="-15200" heading="4156" respawnTime="25sec" chaseRange="950" />  <!-- Lith Warrior -->
++			<npc id="23825" x="109815" y="-218741" z="-15202" heading="41769" respawnTime="25sec" chaseRange="950" />  <!-- Lith Warrior -->
++			<npc id="23825" x="110355" y="-218739" z="-15202" heading="64873" respawnTime="25sec" chaseRange="950" />  <!-- Lith Warrior -->
++			<npc id="23825" x="110429" y="-218578" z="-15200" heading="11890" respawnTime="25sec" chaseRange="950" />  <!-- Lith Warrior -->
++			<npc id="23822" x="110204" y="-218580" z="-15200" heading="34794" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Magus -->
++			<npc id="23822" x="110043" y="-218568" z="-15200" heading="31992" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Magus -->
++			<npc id="23824" x="110043" y="-218568" z="-15200" heading="31992" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Guard -->
++			<npc id="23824" x="109974" y="-218571" z="-15200" heading="33221" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Guard -->
++			<npc id="23822" x="109625" y="-218703" z="-15200" heading="45613" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Magus -->
++			<npc id="23822" x="109655" y="-218617" z="-15200" heading="12883" respawnTime="25sec" chaseRange="950" />  <!-- Lilim's Magus -->
++			<npc id="23823" x="113161" y="-217499" z="-15200" heading="59562" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="113088" y="-217351" z="-15200" heading="21163" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="113134" y="-217314" z="-15200" heading="7065" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="113134" y="-217314" z="-15200" heading="7065" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="113198" y="-217224" z="-15202" heading="9936" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="113158" y="-217090" z="-15200" heading="19409" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="113158" y="-217090" z="-15200" heading="19409" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="113095" y="-217019" z="-15200" heading="23954" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="113095" y="-217019" z="-15200" heading="23954" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="113042" y="-217045" z="-15200" heading="37687" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="112995" y="-217070" z="-15200" heading="37687" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="112995" y="-217070" z="-15200" heading="37687" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="114666" y="-217375" z="-15202" heading="521" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="114604" y="-217287" z="-15200" heading="22785" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="114604" y="-217287" z="-15200" heading="22785" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="114604" y="-217287" z="-15200" heading="22785" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="114625" y="-217074" z="-15200" heading="14567" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="114554" y="-217002" z="-15200" heading="24503" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="114554" y="-217002" z="-15200" heading="24503" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="114601" y="-216898" z="-15200" heading="11927" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="114661" y="-216767" z="-15202" heading="11927" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="114572" y="-216793" z="-15200" heading="35732" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="116853" y="-217741" z="-15200" heading="2334" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="117042" y="-217801" z="-15200" heading="62329" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="117042" y="-217801" z="-15200" heading="62329" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="117042" y="-217801" z="-15200" heading="62329" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="117231" y="-217777" z="-15200" heading="1317" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="117383" y="-217823" z="-15200" heading="62470" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="117383" y="-217823" z="-15200" heading="62470" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="117448" y="-217729" z="-15200" heading="10073" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="117016" y="-217818" z="-15200" heading="4375" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="117016" y="-217818" z="-15200" heading="4375" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="117359" y="-218790" z="-15200" heading="32646" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="117359" y="-218790" z="-15200" heading="32646" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="117485" y="-218819" z="-15200" heading="61870" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="117335" y="-218817" z="-15200" heading="32628" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="117335" y="-218817" z="-15200" heading="32628" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="117239" y="-218747" z="-15200" heading="26179" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="117212" y="-218727" z="-15200" heading="26179" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="117059" y="-218747" z="-15200" heading="34123" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="117059" y="-218747" z="-15200" heading="34123" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="117036" y="-218838" z="-15200" heading="46569" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="116953" y="-218782" z="-15200" heading="26577" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="116953" y="-218782" z="-15200" heading="26577" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="116888" y="-218766" z="-15200" heading="30250" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="116888" y="-218766" z="-15200" heading="30250" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23823" x="115834" y="-215476" z="-15200" heading="16528" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="115852" y="-215419" z="-15200" heading="13146" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="115868" y="-215370" z="-15200" heading="13146" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="115837" y="-215296" z="-15200" heading="20521" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="115837" y="-215296" z="-15200" heading="20521" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="115818" y="-215206" z="-15200" heading="18554" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="115818" y="-215206" z="-15200" heading="18554" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="115821" y="-215081" z="-15200" heading="16111" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="115821" y="-215091" z="-15200" heading="16111" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="115845" y="-215035" z="-15200" heading="12129" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="115856" y="-215010" z="-15200" heading="12129" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="115856" y="-215010" z="-15200" heading="12129" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="114862" y="-213535" z="-15200" heading="31616" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="114856" y="-213654" z="-15200" heading="48638" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="114855" y="-213677" z="-15200" heading="48638" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="114839" y="-213797" z="-15200" heading="47769" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="114839" y="-213797" z="-15200" heading="47769" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="114839" y="-213912" z="-15200" heading="49151" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="114839" y="-213912" z="-15200" heading="49151" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="114844" y="-214036" z="-15200" heading="49572" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="114844" y="-214036" z="-15200" heading="49572" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="114844" y="-214036" z="-15200" heading="58223" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="114921" y="-214101" z="-15200" heading="58223" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="114921" y="-214101" z="-15200" heading="58223" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="116394" y="-212249" z="-15200" heading="65370" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="116394" y="-212249" z="-15200" heading="65370" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="116466" y="-212300" z="-15200" heading="59107" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="116572" y="-212271" z="-15200" heading="2785" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="116572" y="-212271" z="-15200" heading="2785" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="116697" y="-212312" z="-15200" heading="62230" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="116788" y="-212237" z="-15200" heading="7189" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="116879" y="-212169" z="-15200" heading="6693" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="116879" y="-212169" z="-15200" heading="6693" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="116879" y="-212169" z="-15200" heading="6693" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="118406" y="-215089" z="-15200" heading="65296" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="118479" y="-215144" z="-15200" heading="58801" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="118479" y="-215144" z="-15200" heading="58801" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="118662" y="-215119" z="-15200" heading="2888" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="118639" y="-215138" z="-15200" heading="37396" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="118750" y="-215106" z="-15200" heading="2927" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="118750" y="-215106" z="-15200" heading="2927" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="118874" y="-215079" z="-15200" heading="2236" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="118874" y="-215079" z="-15200" heading="2236" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="118987" y="-215173" z="-15202" heading="58298" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="118987" y="-215173" z="-15202" heading="58298" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="118987" y="-215173" z="-15202" heading="58298" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="120244" y="-217705" z="-15200" heading="48014" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="120179" y="-217868" z="-15200" heading="45194" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="120179" y="-217868" z="-15200" heading="45194" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="120260" y="-217871" z="-15200" heading="65149" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="120260" y="-217871" z="-15200" heading="65149" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="120270" y="-218043" z="-15200" heading="49803" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="120275" y="-218111" z="-15200" heading="49803" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="120199" y="-218205" z="-15200" heading="42060" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="120199" y="-218205" z="-15200" heading="42060" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="120283" y="-218303" z="-15200" heading="56543" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="120283" y="-218303" z="-15200" heading="56543" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="120283" y="-218303" z="-15200" heading="56543" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="119128" y="-216754" z="-15200" heading="4560" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="118957" y="-216728" z="-15200" heading="31194" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="118817" y="-216746" z="-15200" heading="34101" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="118817" y="-216746" z="-15200" heading="34101" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="118679" y="-216731" z="-15200" heading="31638" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="118526" y="-216747" z="-15200" heading="33854" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="118351" y="-216772" z="-15200" heading="34269" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="118326" y="-216776" z="-15200" heading="34269" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="118326" y="-216776" z="-15200" heading="34269" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="118536" y="-216787" z="-15200" heading="37181" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="118536" y="-216787" z="-15200" heading="37181" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23823" x="116941" y="-214600" z="-15200" heading="16193" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="116893" y="-214514" z="-15200" heading="21693" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="116893" y="-214514" z="-15200" heading="21693" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="116940" y="-214335" z="-15200" heading="13645" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="116936" y="-214354" z="-15200" heading="13645" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="116936" y="-214354" z="-15200" heading="13645" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="117038" y="-214340" z="-15202" heading="1422" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="116930" y="-214127" z="-15200" heading="21278" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="116930" y="-214127" z="-15200" heading="21278" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="116986" y="-213984" z="-15200" heading="12490" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="116986" y="-213984" z="-15200" heading="12490" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="116986" y="-213984" z="-15200" heading="12490" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="119386" y="-211405" z="-15200" heading="15537" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="119377" y="-211198" z="-15200" heading="16837" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="119377" y="-211198" z="-15200" heading="16837" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="119380" y="-211033" z="-15200" heading="16194" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="119380" y="-211033" z="-15200" heading="16194" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="119463" y="-210961" z="-15200" heading="7453" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="119351" y="-210827" z="-15200" heading="23653" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="119314" y="-210783" z="-15200" heading="39026" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="119238" y="-210835" z="-15202" heading="39026" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="119238" y="-210835" z="-15202" heading="39026" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="120413" y="-211419" z="-15200" heading="15737" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="120416" y="-211303" z="-15200" heading="16069" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="120419" y="-211220" z="-15200" heading="16069" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="120479" y="-211121" z="-15200" heading="10700" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="120479" y="-211121" z="-15200" heading="10700" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="120402" y="-211003" z="-15200" heading="22414" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="120402" y="-211003" z="-15200" heading="22414" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="120316" y="-210969" z="-15200" heading="28841" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="120316" y="-210969" z="-15200" heading="28841" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="120394" y="-210826" z="-15200" heading="11175" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="120394" y="-210826" z="-15200" heading="11175" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="120394" y="-210826" z="-15200" heading="11175" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="120122" y="-207802" z="-15200" heading="8673" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="119981" y="-207829" z="-15200" heading="34741" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="119981" y="-207829" z="-15200" heading="34741" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="119837" y="-207741" z="-15202" heading="27046" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="119837" y="-207741" z="-15202" heading="27046" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="119708" y="-207766" z="-15200" heading="34764" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="119574" y="-207893" z="-15200" heading="40680" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="119388" y="-207775" z="-15200" heading="26871" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="119388" y="-207775" z="-15200" heading="26871" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="119388" y="-207775" z="-15200" heading="26871" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="119545" y="-207887" z="-15200" heading="34634" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="119545" y="-207887" z="-15200" heading="34634" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23823" x="116677" y="-208927" z="-15200" heading="48642" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="116651" y="-209040" z="-15200" heading="46821" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="116637" y="-209103" z="-15200" heading="46821" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="116694" y="-209254" z="-15200" heading="52916" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="116694" y="-209254" z="-15200" heading="52916" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="116658" y="-209393" z="-15200" heading="46508" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="116658" y="-209393" z="-15200" heading="46508" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="116694" y="-209439" z="-15200" heading="56061" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="116736" y="-209493" z="-15200" heading="56061" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="116736" y="-209493" z="-15200" heading="56061" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="116696" y="-209602" z="-15200" heading="45483" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="116696" y="-209602" z="-15200" heading="45483" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="115514" y="-211179" z="-15200" heading="64940" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="115653" y="-211123" z="-15200" heading="3994" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="115653" y="-211123" z="-15200" heading="3994" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="115821" y="-211195" z="-15200" heading="61312" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="115821" y="-211195" z="-15200" heading="61312" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="115956" y="-211199" z="-15200" heading="65227" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="115956" y="-211199" z="-15200" heading="65227" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="116061" y="-211120" z="-15200" heading="6727" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="116061" y="-211120" z="-15200" heading="6727" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="116142" y="-211192" z="-15200" heading="57956" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="116142" y="-211192" z="-15200" heading="57956" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="116142" y="-211192" z="-15200" heading="57956" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="118364" y="-209890" z="-15200" heading="16723" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="118338" y="-209712" z="-15200" heading="17888" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="118338" y="-209711" z="-15200" heading="17888" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="118406" y="-209650" z="-15200" heading="7626" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="118406" y="-209650" z="-15200" heading="7626" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="118380" y="-209533" z="-15200" heading="18672" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="118375" y="-209511" z="-15200" heading="18672" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="118344" y="-209378" z="-15200" heading="18772" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="118344" y="-209378" z="-15200" heading="18772" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="118275" y="-209357" z="-15200" heading="29686" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="118275" y="-209357" z="-15200" heading="29686" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="118275" y="-209357" z="-15200" heading="10288" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="111413" y="-217443" z="-15200" heading="57018" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="111413" y="-217443" z="-15200" heading="57018" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="111458" y="-217328" z="-15200" heading="12399" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="111458" y="-217331" z="-15200" heading="12399" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="111479" y="-217197" z="-15200" heading="14762" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="111405" y="-217101" z="-15200" heading="23233" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="111405" y="-217101" z="-15200" heading="23233" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="111442" y="-216999" z="-15200" heading="12754" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="111442" y="-216999" z="-15200" heading="12754" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="111330" y="-216938" z="-15200" heading="27566" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="111330" y="-216938" z="-15200" heading="27566" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="111332" y="-216825" z="-15200" heading="16157" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="112662" y="-215343" z="-15200" heading="62180" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="112757" y="-215246" z="-15200" heading="8300" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="112757" y="-215246" z="-15200" heading="8300" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="112872" y="-215339" z="-15200" heading="58443" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112872" y="-215339" z="-15200" heading="58443" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="113017" y="-215273" z="-15200" heading="4455" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="113017" y="-215273" z="-15200" heading="4455" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="113116" y="-215347" z="-15200" heading="58840" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="113116" y="-215347" z="-15200" heading="58840" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="113228" y="-215300" z="-15200" heading="4144" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="113228" y="-215300" z="-15200" heading="4144" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="113414" y="-215317" z="-15200" heading="64585" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="113351" y="-214233" z="-15200" heading="33316" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="113282" y="-214301" z="-15200" heading="40883" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="113282" y="-214301" z="-15200" heading="40883" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="113037" y="-214153" z="-15200" heading="27099" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="113037" y="-214153" z="-15200" heading="27099" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="112937" y="-214221" z="-15200" heading="38996" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="112937" y="-214221" z="-15200" heading="38996" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="112767" y="-214150" z="-15200" heading="28659" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="112783" y="-214157" z="-15200" heading="28659" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="112670" y="-214164" z="-15200" heading="33413" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112670" y="-214164" z="-15200" heading="33413" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="112670" y="-214164" z="-15200" heading="33413" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="111379" y="-211317" z="-15200" heading="24647" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="111191" y="-211415" z="-15200" heading="37780" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="111191" y="-211415" z="-15200" heading="37780" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="111138" y="-211329" z="-15200" heading="22144" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="111138" y="-211329" z="-15200" heading="22144" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="111049" y="-211382" z="-15200" heading="38370" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="111049" y="-211382" z="-15200" heading="38370" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="110916" y="-211331" z="-15200" heading="28948" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="110916" y="-211331" z="-15200" heading="28948" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="110816" y="-211421" z="-15200" heading="40411" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="110816" y="-211421" z="-15200" heading="40411" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="110816" y="-211421" z="-15200" heading="40411" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="110370" y="-214948" z="-15200" heading="49258" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="110373" y="-215202" z="-15200" heading="49258" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="110407" y="-215303" z="-15200" heading="52538" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="110369" y="-215392" z="-15200" heading="44942" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="110369" y="-215392" z="-15200" heading="44942" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="110448" y="-215435" z="-15200" heading="60336" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="110448" y="-215435" z="-15200" heading="60336" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="110398" y="-215583" z="-15200" heading="45753" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="110398" y="-215583" z="-15200" heading="45753" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="110333" y="-215665" z="-15200" heading="42160" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="110333" y="-215665" z="-15200" heading="42160" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="110347" y="-215887" z="-15200" heading="49835" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="109380" y="-216003" z="-15200" heading="13498" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="109366" y="-215781" z="-15200" heading="17040" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="109366" y="-215781" z="-15200" heading="17040" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="109293" y="-215762" z="-15200" heading="30112" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="109293" y="-215762" z="-15200" heading="30112" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="109323" y="-215606" z="-15200" heading="14402" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="109323" y="-215606" z="-15200" heading="14402" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="109387" y="-215460" z="-15200" heading="12074" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="109387" y="-215460" z="-15200" heading="12074" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="109337" y="-215368" z="-15200" heading="21576" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="109337" y="-215368" z="-15200" heading="21576" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="109362" y="-215140" z="-15200" heading="15237" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="112884" y="-212524" z="-15200" heading="12560" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="112812" y="-212384" z="-15200" heading="21338" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112865" y="-212285" z="-15200" heading="11257" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="112865" y="-212285" z="-15200" heading="11257" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="112805" y="-212222" z="-15200" heading="24321" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="112805" y="-212222" z="-15200" heading="24321" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="112805" y="-212222" z="-15200" heading="52695" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="112852" y="-212355" z="-15200" heading="52695" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="112799" y="-212260" z="-15200" heading="21691" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112799" y="-212260" z="-15200" heading="21691" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="112708" y="-212205" z="-15202" heading="14117" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="111561" y="-209731" z="-15200" heading="37800" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="111442" y="-209650" z="-15200" heading="26534" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="111442" y="-209650" z="-15200" heading="26534" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="111266" y="-209748" z="-15200" heading="38067" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="111266" y="-209748" z="-15200" heading="38067" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="111154" y="-209676" z="-15200" heading="26808" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="110915" y="-209719" z="-15200" heading="61104" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="110915" y="-209719" z="-15200" heading="61104" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="111148" y="-209714" z="-15200" heading="223" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="111148" y="-209714" z="-15200" heading="223" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="111143" y="-209755" z="-15200" heading="47886" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="111143" y="-209755" z="-15200" heading="47886" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23823" x="112182" y="-207673" z="-15200" heading="64397" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="112216" y="-207624" z="-15200" heading="10056" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="112216" y="-207624" z="-15200" heading="10056" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112307" y="-207654" z="-15200" heading="62214" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="112307" y="-207654" z="-15200" heading="62214" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112402" y="-207671" z="-15200" heading="63689" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="112402" y="-207671" z="-15200" heading="63689" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23824" x="112490" y="-207649" z="-15200" heading="2555" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="112490" y="-207649" z="-15200" heading="2555" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23825" x="112549" y="-207653" z="-15200" heading="64728" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112606" y="-207658" z="-15200" heading="64728" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="112606" y="-207658" z="-15200" heading="64728" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="113156" y="-208699" z="-15200" heading="30665" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23823" x="113076" y="-208781" z="-15200" heading="41088" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="113076" y="-208781" z="-15200" heading="41088" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112907" y="-208706" z="-15200" heading="28411" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="112907" y="-208706" z="-15200" heading="28411" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112805" y="-208777" z="-15200" heading="39110" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23824" x="112805" y="-208777" z="-15200" heading="39110" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="112673" y="-208718" z="-15200" heading="28383" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="112673" y="-208718" z="-15200" heading="28383" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23825" x="112550" y="-208742" z="-15200" heading="34777" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="112550" y="-208742" z="-15200" heading="34777" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23822" x="112365" y="-208716" z="-15200" heading="31351" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23823" x="109484" y="-208008" z="-15200" heading="39996" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Butcher -->
++			<npc id="23825" x="109492" y="-208159" z="-15200" heading="49704" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="109490" y="-208274" z="-15200" heading="48970" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="109490" y="-208274" z="-15200" heading="48970" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="109488" y="-208391" z="-15200" heading="48973" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="109488" y="-208391" z="-15200" heading="48973" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="109479" y="-208515" z="-15200" heading="48396" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23824" x="109479" y="-208515" z="-15200" heading="48396" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Guardian -->
++			<npc id="23822" x="109477" y="-208624" z="-15200" heading="48960" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<npc id="23825" x="109477" y="-208624" z="-15200" heading="48960" respawnTime="25sec" chaseRange="950" /> <!-- Lith Warrior -->
++			<npc id="23822" x="109477" y="-208624" z="-15200" heading="48960" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Magus -->
++			<!-- Group Lv 120 -->
++			<npc id="23827" x="110568" y="-251607" z="-6509" heading="1382" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="110568" y="-251607" z="-6509" heading="1382" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="110779" y="-251674" z="-6509" heading="62329" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="110779" y="-251674" z="-6509" heading="9598" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="110865" y="-251561" z="-6509" heading="9598" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="111019" y="-251580" z="-6509" heading="64255" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="111019" y="-251580" z="-6509" heading="64255" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="111078" y="-251475" z="-6509" heading="11006" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="111087" y="-251460" z="-6511" heading="11006" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="111087" y="-251460" z="-6511" heading="11006" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="111196" y="-251677" z="-6509" heading="54007" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="111196" y="-251677" z="-6509" heading="54007" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="112919" y="-250577" z="-6509" heading="757" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="112841" y="-250593" z="-6509" heading="34878" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="112841" y="-250593" z="-6509" heading="34878" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="112676" y="-250612" z="-6509" heading="33963" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="112572" y="-250578" z="-6509" heading="29472" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="112402" y="-250513" z="-6509" heading="28998" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="112408" y="-250516" z="-6509" heading="28998" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="112223" y="-250534" z="-6509" heading="33788" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="112245" y="-250532" z="-6509" heading="33788" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="112211" y="-250593" z="-6509" heading="43848" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="112211" y="-250593" z="-6509" heading="43848" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="112211" y="-250593" z="-6509" heading="43848" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="115748" y="-251592" z="-6509" heading="2530" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="115919" y="-251558" z="-6509" heading="2047" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="115919" y="-251558" z="-6509" heading="2047" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="116124" y="-251604" z="-6509" heading="63233" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="116124" y="-251604" z="-6509" heading="63233" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="116245" y="-251599" z="-6509" heading="430" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="116245" y="-251599" z="-6509" heading="430" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="116245" y="-251599" z="-6509" heading="64268" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="116376" y="-251615" z="-6509" heading="64268" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="116428" y="-251683" z="-6509" heading="55961" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="116428" y="-251683" z="-6509" heading="55961" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="116428" y="-251683" z="-6509" heading="55961" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="115526" y="-249614" z="-6509" heading="17293" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="115596" y="-249436" z="-6509" heading="12475" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="115596" y="-249436" z="-6509" heading="12475" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="115556" y="-249322" z="-6509" heading="19837" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="115552" y="-249308" z="-6509" heading="19837" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="115505" y="-249198" z="-6509" heading="20595" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="115505" y="-249198" z="-6509" heading="20595" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="115565" y="-249020" z="-6509" heading="12992" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23828" x="115565" y="-249020" z="-6509" heading="12992" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="115472" y="-248912" z="-6509" heading="23799" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="115472" y="-248912" z="-6509" heading="23799" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="115508" y="-248738" z="-6509" heading="14236" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="113297" y="-247301" z="-6509" heading="16286" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="113256" y="-247478" z="-6509" heading="46818" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="113259" y="-247468" z="-6509" heading="46818" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="113239" y="-247626" z="-6509" heading="47838" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113239" y="-247626" z="-6509" heading="47838" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="113259" y="-247767" z="-6509" heading="50621" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="113263" y="-247732" z="-6509" heading="44401" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="113263" y="-247732" z="-6509" heading="44401" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="113250" y="-247937" z="-6509" heading="48491" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113306" y="-247990" z="-6509" heading="57631" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="113306" y="-247990" z="-6509" heading="57631" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113306" y="-247990" z="-6509" heading="57631" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="110793" y="-245965" z="-6509" heading="62602" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="110677" y="-245959" z="-6509" heading="32279" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="110601" y="-245956" z="-6509" heading="32279" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="110533" y="-246014" z="-6509" heading="40133" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="110533" y="-246014" z="-6509" heading="40133" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="110425" y="-245951" z="-6509" heading="27259" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="110425" y="-245951" z="-6509" heading="27259" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="110275" y="-246132" z="-6509" heading="41960" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="110270" y="-246139" z="-6511" heading="41960" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="110180" y="-246026" z="-6509" heading="23399" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="110180" y="-246026" z="-6509" heading="23399" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="110180" y="-246026" z="-6509" heading="23399" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="109223" y="-247226" z="-6509" heading="48866" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="109223" y="-247226" z="-6509" heading="41180" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="109084" y="-247371" z="-6511" heading="41180" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="109178" y="-247444" z="-6509" heading="58648" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="109178" y="-247444" z="-6509" heading="58648" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="109194" y="-247594" z="-6509" heading="50260" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="109194" y="-247594" z="-6509" heading="50260" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="109214" y="-247743" z="-6509" heading="50543" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23828" x="109214" y="-247743" z="-6509" heading="50543" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="109195" y="-247868" z="-6509" heading="47578" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="109195" y="-247868" z="-6509" heading="47578" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="109195" y="-247868" z="-6509" heading="47578" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="111252" y="-246969" z="-6509" heading="61234" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="111372" y="-246976" z="-6509" heading="64928" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="111372" y="-246976" z="-6509" heading="64928" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="111467" y="-246966" z="-6509" heading="1093" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="111467" y="-246966" z="-6509" heading="1093" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="111537" y="-247022" z="-6509" heading="1093" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="111643" y="-247013" z="-6509" heading="62814" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="111768" y="-246959" z="-6509" heading="4253" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23828" x="111768" y="-246959" z="-6509" heading="4253" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="111894" y="-246937" z="-6509" heading="1803" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="111894" y="-246937" z="-6509" heading="1803" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="111894" y="-246937" z="-6509" heading="1803" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="113098" y="-244435" z="-6509" heading="514" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="113213" y="-244460" z="-6509" heading="63303" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113351" y="-244395" z="-6509" heading="4591" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="113351" y="-244395" z="-6509" heading="4591" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113440" y="-244462" z="-6509" heading="4591" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="113557" y="-244435" z="-6509" heading="2262" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="113663" y="-244494" z="-6509" heading="60222" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="113668" y="-244497" z="-6509" heading="60222" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="113815" y="-244454" z="-6509" heading="2968" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113815" y="-244454" z="-6509" heading="2968" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="113815" y="-244454" z="-6509" heading="2968" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="112167" y="-243320" z="-6509" heading="15771" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="112176" y="-243182" z="-6509" heading="15704" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="112176" y="-243182" z="-6509" heading="15704" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="112186" y="-243044" z="-6509" heading="15629" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="112186" y="-243044" z="-6509" heading="15629" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="112186" y="-243044" z="-6509" heading="15629" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="112200" y="-242912" z="-6509" heading="15281" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="112200" y="-242912" z="-6509" heading="15281" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="112148" y="-242763" z="-6509" heading="19886" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23828" x="112148" y="-242763" z="-6509" heading="19886" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="112148" y="-242763" z="-6509" heading="19886" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="112025" y="-242758" z="-6511" heading="32344" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="112025" y="-242758" z="-6511" heading="32344" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="114511" y="-245988" z="-6509" heading="42" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="114547" y="-245941" z="-6509" heading="9360" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="114582" y="-245899" z="-6509" heading="9360" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="114780" y="-246020" z="-6509" heading="59814" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="114780" y="-246020" z="-6509" heading="59814" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="114928" y="-245918" z="-6509" heading="6276" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="114930" y="-245917" z="-6509" heading="6276" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="115107" y="-245913" z="-6509" heading="219" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="115120" y="-245913" z="-6509" heading="219" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="115120" y="-245913" z="-6509" heading="219" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="115020" y="-245842" z="-6511" heading="26328" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="115020" y="-245842" z="-6511" heading="26328" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="116013" y="-247525" z="-6509" heading="32344" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="116142" y="-247567" z="-6509" heading="62252" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="116142" y="-247567" z="-6509" heading="62252" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="116285" y="-247550" z="-6509" heading="1234" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="116285" y="-247550" z="-6509" heading="1234" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="116430" y="-247637" z="-6511" heading="59899" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="116430" y="-247637" z="-6511" heading="59899" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="116551" y="-247568" z="-6509" heading="5405" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="116551" y="-247568" z="-6509" heading="5405" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="116551" y="-247568" z="-6509" heading="5405" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="116306" y="-247569" z="-6509" heading="32810" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="116306" y="-247569" z="-6509" heading="32810" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23827" x="117593" y="-248573" z="-6509" heading="48507" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="117604" y="-248749" z="-6509" heading="49633" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="117623" y="-248917" z="-6509" heading="50326" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="117623" y="-248917" z="-6509" heading="50326" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="117623" y="-248917" z="-6509" heading="50326" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="117551" y="-249099" z="-6509" heading="45222" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="117551" y="-249099" z="-6509" heading="45222" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="117712" y="-249171" z="-6511" heading="61149" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="117669" y="-249298" z="-6509" heading="45746" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="117669" y="-249298" z="-6509" heading="45746" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="117669" y="-249298" z="-6509" heading="45746" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="118284" y="-251644" z="-6509" heading="33244" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="118444" y="-251633" z="-6509" heading="715" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="118589" y="-251645" z="-6509" heading="64674" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="118589" y="-251645" z="-6509" heading="64674" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="118589" y="-251645" z="-6509" heading="64674" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="118723" y="-251585" z="-6509" heading="4391" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="118804" y="-251618" z="-6509" heading="61500" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="118804" y="-251618" z="-6509" heading="61500" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="118857" y="-251558" z="-6509" heading="8837" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="118857" y="-251558" z="-6509" heading="8837" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="118857" y="-251558" z="-6509" heading="8837" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="120204" y="-250226" z="-6509" heading="10988" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="120162" y="-250112" z="-6509" heading="20065" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="120185" y="-249978" z="-6509" heading="14610" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="120185" y="-249978" z="-6509" heading="14610" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23828" x="120185" y="-249852" z="-6509" heading="16383" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="120185" y="-249852" z="-6509" heading="16383" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="120121" y="-249716" z="-6509" heading="20971" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23828" x="120121" y="-249716" z="-6509" heading="20971" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="120209" y="-249639" z="-6509" heading="7497" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="120209" y="-249639" z="-6509" heading="7497" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="120162" y="-249611" z="-6509" heading="27163" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="119144" y="-247836" z="-6509" heading="19029" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="119145" y="-248019" z="-6509" heading="49214" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="119145" y="-248004" z="-6509" heading="49214" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="119149" y="-248162" z="-6509" heading="49416" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="119149" y="-248162" z="-6509" heading="49416" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="119149" y="-248162" z="-6509" heading="49416" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="119164" y="-248355" z="-6509" heading="49961" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="119171" y="-248481" z="-6509" heading="49730" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="119171" y="-248481" z="-6509" heading="49730" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="119171" y="-248481" z="-6509" heading="49730" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="119068" y="-248400" z="-6511" heading="12991" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="119068" y="-248400" z="-6511" heading="12991" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="119924" y="-245976" z="-6509" heading="563" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="119924" y="-245976" z="-6509" heading="31484" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23827" x="119738" y="-245953" z="-6509" heading="31484" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="119738" y="-245953" z="-6509" heading="31484" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23826" x="119653" y="-246019" z="-6509" heading="39654" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="119541" y="-245982" z="-6509" heading="29431" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="119496" y="-245967" z="-6509" heading="29431" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="119337" y="-245938" z="-6509" heading="30886" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="119244" y="-245965" z="-6509" heading="63040" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="119244" y="-245965" z="-6509" heading="63040" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="119142" y="-245875" z="-6511" heading="25227" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="119142" y="-245875" z="-6511" heading="25227" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="111592" y="-240324" z="-6509" heading="1609" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="111592" y="-240324" z="-6509" heading="32838" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="111444" y="-240325" z="-6509" heading="32838" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="111348" y="-240313" z="-6509" heading="31470" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="111348" y="-240313" z="-6509" heading="31470" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="111348" y="-240313" z="-6509" heading="31470" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="111137" y="-240345" z="-6509" heading="34337" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="111077" y="-240344" z="-6509" heading="32673" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="111027" y="-240344" z="-6509" heading="32673" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="111016" y="-240283" z="-6509" heading="18106" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="111013" y="-240260" z="-6509" heading="18106" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="111013" y="-240260" z="-6509" heading="18106" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="109569" y="-241718" z="-6509" heading="43709" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="109569" y="-241718" z="-6509" heading="43709" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="109595" y="-241842" z="-6509" heading="51307" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="109582" y="-241987" z="-6509" heading="48219" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="109582" y="-241987" z="-6509" heading="48219" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="109565" y="-242102" z="-6509" heading="47621" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="109565" y="-242102" z="-6509" heading="47621" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="109613" y="-242267" z="-6509" heading="52104" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="109613" y="-242267" z="-6509" heading="52104" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="109474" y="-242309" z="-6511" heading="35828" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="109474" y="-242309" z="-6511" heading="35828" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="109474" y="-242309" z="-6511" heading="35828" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="110594" y="-244093" z="-6509" heading="45717" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="110600" y="-243974" z="-6509" heading="15831" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="110602" y="-243942" z="-6509" heading="15831" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="110587" y="-243885" z="-6509" heading="18920" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="110570" y="-243813" z="-6509" heading="18920" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="110607" y="-243671" z="-6509" heading="13725" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="110607" y="-243671" z="-6509" heading="13725" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="110616" y="-243521" z="-6509" heading="15758" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23828" x="110616" y="-243521" z="-6509" heading="15758" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="110588" y="-243427" z="-6509" heading="19403" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="110588" y="-243427" z="-6509" heading="19403" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="110588" y="-243427" z="-6509" heading="19403" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="120550" y="-244850" z="-6509" heading="55676" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="120520" y="-244763" z="-6509" heading="19847" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="120520" y="-244763" z="-6509" heading="19847" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="120603" y="-244680" z="-6509" heading="8191" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="120603" y="-244680" z="-6509" heading="8191" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="120551" y="-244524" z="-6509" heading="19739" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="120551" y="-244524" z="-6509" heading="19739" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="120502" y="-244485" z="-6509" heading="25756" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="120502" y="-244485" z="-6509" heading="25756" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="120635" y="-244369" z="-6509" heading="7442" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="120651" y="-244356" z="-6511" heading="7442" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="120651" y="-244356" z="-6511" heading="18442" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="118572" y="-244975" z="-6509" heading="28100" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="118572" y="-244975" z="-6509" heading="28100" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="118527" y="-244946" z="-6509" heading="26797" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="118409" y="-244935" z="-6509" heading="31810" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="118375" y="-244932" z="-6509" heading="31810" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="118292" y="-244984" z="-6509" heading="38605" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="118292" y="-244984" z="-6509" heading="38605" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="118170" y="-244946" z="-6509" heading="29618" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="118170" y="-244946" z="-6509" heading="29618" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="118078" y="-244985" z="-6509" heading="36950" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="118078" y="-244985" z="-6509" heading="36950" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="117972" y="-244892" z="-6509" heading="25256" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="114236" y="-242331" z="-6509" heading="65293" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="114236" y="-242331" z="-6509" heading="65293" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="114112" y="-242475" z="-6511" heading="41736" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="114133" y="-242528" z="-6510" heading="53101" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="114188" y="-242666" z="-6509" heading="53101" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="114231" y="-242733" z="-6509" heading="55103" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="114231" y="-242733" z="-6509" heading="55103" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="114182" y="-242835" z="-6509" heading="44480" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="114182" y="-242835" z="-6509" heading="44480" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="114277" y="-242948" z="-6509" heading="56443" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="114277" y="-242948" z="-6509" heading="56443" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="114277" y="-242948" z="-6509" heading="56443" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="116481" y="-244592" z="-6509" heading="49882" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="116477" y="-244509" z="-6509" heading="16886" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="116477" y="-244509" z="-6509" heading="16886" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="116473" y="-244371" z="-6509" heading="16686" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="116473" y="-244371" z="-6509" heading="16686" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="116449" y="-244277" z="-6509" heading="18991" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="116449" y="-244277" z="-6509" heading="18991" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="116434" y="-244147" z="-6509" heading="17526" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="116438" y="-244177" z="-6509" heading="17526" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="116546" y="-244135" z="-6509" heading="3809" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="116608" y="-244112" z="-6511" heading="3809" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="116608" y="-244112" z="-6511" heading="3809" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="117448" y="-242912" z="-6509" heading="32901" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="117448" y="-242912" z="-6509" heading="32901" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="117565" y="-242883" z="-6509" heading="2534" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="117687" y="-242895" z="-6509" heading="64513" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="117687" y="-242895" z="-6509" heading="64513" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="117737" y="-242927" z="-6509" heading="59617" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="117778" y="-242953" z="-6509" heading="59617" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="117899" y="-242906" z="-6509" heading="3864" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="117899" y="-242906" z="-6509" heading="3864" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="117997" y="-242926" z="-6509" heading="63436" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="117997" y="-242926" z="-6509" heading="63436" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="117997" y="-242926" z="-6509" heading="63436" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="119223" y="-240318" z="-6509" heading="53152" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="119157" y="-240334" z="-6509" heading="35248" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="119107" y="-240307" z="-6509" heading="27603" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="119047" y="-240308" z="-6509" heading="33080" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="119007" y="-240310" z="-6509" heading="33080" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="119007" y="-240310" z="-6509" heading="27131" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="118887" y="-240238" z="-6511" heading="27131" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="118887" y="-240238" z="-6511" heading="27131" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="118767" y="-240378" z="-6509" heading="41760" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="118665" y="-240270" z="-6509" heading="24278" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="118665" y="-240270" z="-6509" heading="24278" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="118665" y="-240270" z="-6509" heading="24278" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="116731" y="-241349" z="-6509" heading="34384" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="116838" y="-241386" z="-6509" heading="62063" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="116838" y="-241386" z="-6509" heading="62063" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="116838" y="-241386" z="-6509" heading="62063" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="116912" y="-241427" z="-6509" heading="60258" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="117076" y="-241386" z="-6509" heading="2555" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="117076" y="-241386" z="-6509" heading="2555" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="117172" y="-241331" z="-6509" heading="5426" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="117172" y="-241331" z="-6509" heading="5426" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="117313" y="-241405" z="-6509" heading="60494" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="117313" y="-241405" z="-6509" heading="60494" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="117313" y="-241405" z="-6509" heading="60494" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="120568" y="-242324" z="-6509" heading="47233" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="120568" y="-242324" z="-6509" heading="47233" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="120613" y="-242129" z="-6509" heading="14018" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="120572" y="-242065" z="-6509" heading="22326" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="120572" y="-242065" z="-6509" heading="22326" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="120555" y="-241965" z="-6509" heading="18140" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23826" x="120555" y="-241965" z="-6509" heading="18140" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="120646" y="-241888" z="-6509" heading="7324" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="120646" y="-241888" z="-6509" heading="7324" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="120606" y="-241731" z="-6509" heading="18986" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23829" x="120606" y="-241731" z="-6509" heading="18986" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="120606" y="-241731" z="-6509" heading="18986" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23827" x="114113" y="-240344" z="-6509" heading="33332" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23827" x="114030" y="-240352" z="-6509" heading="33770" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Guardsman -->
++			<npc id="23829" x="114030" y="-240352" z="-6509" heading="33770" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="114030" y="-240352" z="-6509" heading="33770" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113835" y="-240301" z="-6509" heading="30099" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="113779" y="-240312" z="-6509" heading="34844" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23828" x="113602" y="-240348" z="-6509" heading="34844" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23828" x="113544" y="-240345" z="-6509" heading="32240" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Commander -->
++			<npc id="23829" x="113444" y="-240340" z="-6509" heading="32240" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23829" x="113321" y="-240281" z="-6509" heading="28102" respawnTime="25sec" chaseRange="950" /> <!-- Giant Follower -->
++			<npc id="23826" x="113321" y="-240281" z="-6509" heading="28102" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++			<npc id="23826" x="113321" y="-240281" z="-6509" heading="28102" respawnTime="25sec" chaseRange="950" /> <!-- Nephilim Bishop -->
++		<!-- Group Lv 125 -->
++			<npc id="23831" x="110470" y="-212723" z="-5681" heading="31100" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="110470" y="-212723" z="-5681" heading="31100" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="110645" y="-212747" z="-5681" heading="64114" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="110645" y="-212747" z="-5681" heading="64114" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="110762" y="-212830" z="-5683" heading="59100" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="110762" y="-212830" z="-5683" heading="59100" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="110912" y="-212847" z="-5683" heading="64358" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="110994" y="-212755" z="-5681" heading="8693" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="111001" y="-212749" z="-5681" heading="8693" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="111131" y="-212744" z="-5681" heading="379" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="111111" y="-212745" z="-5681" heading="379" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="111111" y="-212745" z="-5681" heading="379" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="110262" y="-214840" z="-5681" heading="50097" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="110262" y="-214840" z="-5681" heading="50097" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="110235" y="-215014" z="-5681" heading="47546" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="110294" y="-215166" z="-5681" heading="52997" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="110286" y="-215146" z="-5681" heading="52997" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="110230" y="-215263" z="-5681" heading="44495" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="110230" y="-215263" z="-5681" heading="44495" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="110303" y="-215378" z="-5681" heading="55051" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="110303" y="-215378" z="-5681" heading="55051" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="110228" y="-215533" z="-5681" heading="44471" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="110238" y="-215513" z="-5681" heading="44471" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="110238" y="-215513" z="-5681" heading="44471" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="109238" y="-214774" z="-5681" heading="48991" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="109265" y="-214925" z="-5681" heading="51031" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="109281" y="-215010" z="-5681" heading="51031" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="109281" y="-215010" z="-5681" heading="51031" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="109179" y="-215048" z="-5681" heading="36487" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="109171" y="-215125" z="-5681" heading="48092" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="109163" y="-215205" z="-5681" heading="48092" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="109163" y="-215205" z="-5681" heading="48092" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="109296" y="-215366" z="-5681" heading="56362" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="109230" y="-215481" z="-5681" heading="45142" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="109230" y="-215481" z="-5681" heading="45142" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="109163" y="-215586" z="-5681" heading="43227" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="109548" y="-218443" z="-5681" heading="51046" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="109664" y="-218442" z="-5681" heading="55" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="109736" y="-218442" z="-5681" heading="55" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="109851" y="-218406" z="-5681" heading="3164" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="109851" y="-218406" z="-5681" heading="3164" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="109972" y="-218470" z="-5681" heading="60461" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="109972" y="-218470" z="-5681" heading="60461" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="110024" y="-218582" z="-5682" heading="53730" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="110026" y="-218585" z="-5683" heading="53730" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="110055" y="-218513" z="-5682" heading="12341" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="110123" y="-218355" z="-5681" heading="12010" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="110123" y="-218355" z="-5681" heading="12010" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="111292" y="-217220" z="-5681" heading="60282" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="111295" y="-217099" z="-5681" heading="16100" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="111296" y="-217073" z="-5681" heading="16100" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="111296" y="-217073" z="-5681" heading="16100" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="111394" y="-216880" z="-5683" heading="11483" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="111348" y="-216817" z="-5681" heading="22896" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="111296" y="-216744" z="-5681" heading="22896" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="111328" y="-216672" z="-5681" heading="11952" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="111353" y="-216618" z="-5681" heading="11952" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="111252" y="-216493" z="-5681" heading="23504" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="111253" y="-216495" z="-5681" heading="23504" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="111253" y="-216495" z="-5681" heading="23504" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="112957" y="-217332" z="-5681" heading="16353" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="113013" y="-217105" z="-5681" heading="12705" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="113011" y="-217112" z="-5681" heading="12705" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112902" y="-216996" z="-5681" heading="24289" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112887" y="-216981" z="-5681" heading="24289" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="113018" y="-216871" z="-5681" heading="7285" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="113018" y="-216871" z="-5681" heading="7285" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="112949" y="-216677" z="-5681" heading="19943" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="112953" y="-216688" z="-5681" heading="19943" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112953" y="-216688" z="-5681" heading="19943" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="113085" y="-216761" z="-5683" heading="60266" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="113110" y="-216689" z="-5683" heading="12828" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="114133" y="-215099" z="-5681" heading="62963" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="114064" y="-215134" z="-5681" heading="37706" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="113971" y="-215182" z="-5681" heading="37706" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="113851" y="-215087" z="-5681" heading="25783" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="113851" y="-215087" z="-5681" heading="25783" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="113819" y="-214973" z="-5681" heading="19161" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23831" x="113809" y="-214933" z="-5683" heading="19161" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="113622" y="-214979" z="-5683" heading="35283" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="113521" y="-215045" z="-5681" heading="38881" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="113479" y="-215094" z="-5681" heading="43531" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="113445" y="-215152" z="-5681" heading="43531" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="113445" y="-215152" z="-5681" heading="43531" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="111290" y="-211235" z="-5681" heading="13400" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="111214" y="-211237" z="-5681" heading="33104" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="110980" y="-211245" z="-5681" heading="33104" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="110980" y="-211245" z="-5681" heading="33104" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="110883" y="-211224" z="-5681" heading="30544" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="110883" y="-211224" z="-5681" heading="43370" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="110728" y="-211380" z="-5683" heading="38145" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="110691" y="-211200" z="-5681" heading="18498" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="110691" y="-211200" z="-5681" heading="18498" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="110591" y="-211122" z="-5682" heading="25850" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23831" x="110595" y="-211125" z="-5683" heading="25850" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="110595" y="-211125" z="-5683" heading="25850" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23832" x="109401" y="-208581" z="-5681" heading="16592" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="109410" y="-208352" z="-5681" heading="15974" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="109410" y="-208352" z="-5681" heading="15974" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="109399" y="-208168" z="-5681" heading="17006" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="109399" y="-208168" z="-5681" heading="17006" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="109414" y="-208040" z="-5681" heading="15167" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23831" x="109414" y="-208040" z="-5681" heading="15167" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="109491" y="-208056" z="-5681" heading="63280" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23833" x="109546" y="-208069" z="-5683" heading="63280" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="109430" y="-208086" z="-5681" heading="34381" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="109360" y="-208098" z="-5681" heading="34381" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="109360" y="-208098" z="-5681" heading="34381" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="110637" y="-209601" z="-5681" heading="49215" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="110674" y="-209594" z="-5681" heading="1753" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="110855" y="-209564" z="-5681" heading="1753" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="111054" y="-209563" z="-5681" heading="50" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23832" x="111063" y="-209563" z="-5681" heading="50" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="111176" y="-209598" z="-5681" heading="62412" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="111212" y="-209609" z="-5681" heading="62412" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="111212" y="-209609" z="-5681" heading="62412" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="111290" y="-209421" z="-5683" heading="12281" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="111290" y="-209421" z="-5683" heading="12281" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23831" x="111492" y="-209672" z="-5683" heading="4625" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="111492" y="-209672" z="-5683" heading="4625" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="112703" y="-210723" z="-5681" heading="49540" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="112695" y="-210760" z="-5681" heading="47188" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="112663" y="-210933" z="-5681" heading="47188" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112752" y="-211013" z="-5681" heading="57898" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112752" y="-211013" z="-5681" heading="57898" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="112694" y="-211064" z="-5681" heading="40459" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="112621" y="-211132" z="-5681" heading="40459" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="112751" y="-211305" z="-5681" heading="55873" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="112751" y="-211305" z="-5681" heading="55873" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112634" y="-211408" z="-5681" heading="40347" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112598" y="-211441" z="-5683" heading="40347" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="112598" y="-211441" z="-5683" heading="40347" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="113807" y="-211553" z="-5681" heading="16922" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="113787" y="-211436" z="-5681" heading="18147" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="113779" y="-211389" z="-5681" heading="18147" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="113879" y="-211220" z="-5681" heading="10810" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="113879" y="-211220" z="-5681" heading="10810" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="113777" y="-211134" z="-5681" heading="25461" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="113777" y="-211134" z="-5681" heading="25461" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="113788" y="-211057" z="-5681" heading="14786" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="113802" y="-210972" z="-5681" heading="14786" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="113792" y="-210847" z="-5681" heading="17216" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="113792" y="-210847" z="-5681" heading="17216" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="113792" y="-210847" z="-5681" heading="17216" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="116303" y="-212105" z="-5681" heading="274" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="116443" y="-212086" z="-5681" heading="1406" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="116443" y="-212086" z="-5681" heading="1406" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116606" y="-212134" z="-5681" heading="62548" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="116606" y="-212134" z="-5681" heading="62548" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116606" y="-212134" z="-5681" heading="5299" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="116773" y="-212041" z="-5681" heading="5299" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="116893" y="-212120" z="-5681" heading="59463" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="116893" y="-212120" z="-5681" heading="59463" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116961" y="-212071" z="-5681" heading="6443" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="116969" y="-212066" z="-5681" heading="6443" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116969" y="-212066" z="-5681" heading="6443" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="116869" y="-213607" z="-5681" heading="29025" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="116821" y="-213669" z="-5681" heading="42358" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="116776" y="-213729" z="-5683" heading="42358" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116792" y="-213934" z="-5683" heading="49964" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="116792" y="-213934" z="-5683" heading="49964" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116892" y="-213997" z="-5681" heading="59672" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23831" x="116892" y="-213997" z="-5681" heading="59672" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="116940" y="-214149" z="-5681" heading="52360" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23833" x="116946" y="-214167" z="-5681" heading="52360" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116946" y="-214167" z="-5681" heading="52360" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="116960" y="-214338" z="-5681" heading="46222" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116960" y="-214338" z="-5681" heading="46222" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="118243" y="-214833" z="-5681" heading="48574" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="118432" y="-214900" z="-5681" heading="61985" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="118551" y="-214843" z="-5681" heading="4836" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="118551" y="-214843" z="-5681" heading="4836" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23832" x="118607" y="-214904" z="-5681" heading="56898" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="118607" y="-214904" z="-5681" heading="56898" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23831" x="118721" y="-214848" z="-5681" heading="4762" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="118721" y="-214848" z="-5681" heading="4762" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="118901" y="-214859" z="-5681" heading="64899" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="119004" y="-214798" z="-5681" heading="5577" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="119004" y="-214798" z="-5681" heading="5577" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="119037" y="-214816" z="-5681" heading="60308" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="119396" y="-211002" z="-5681" heading="13028" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="119364" y="-210934" z="-5681" heading="20723" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="119320" y="-210833" z="-5681" heading="20723" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="119320" y="-210833" z="-5681" heading="20723" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="119368" y="-210681" z="-5681" heading="13155" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="119296" y="-210515" z="-5681" heading="21557" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23832" x="119296" y="-210515" z="-5681" heading="21557" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="119212" y="-210498" z="-5683" heading="30685" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="119212" y="-210498" z="-5683" heading="30685" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="119212" y="-210498" z="-5683" heading="30685" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="119302" y="-211263" z="-5681" heading="39084" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="119302" y="-211263" z="-5681" heading="39084" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="120353" y="-210348" z="-5681" heading="47775" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="120356" y="-210507" z="-5681" heading="49382" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="120357" y="-210529" z="-5681" heading="49382" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="120380" y="-210668" z="-5681" heading="50862" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="120380" y="-210668" z="-5681" heading="50862" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="120362" y="-210831" z="-5681" heading="48004" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="120362" y="-210831" z="-5681" heading="48004" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="120369" y="-210993" z="-5681" heading="49654" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="120370" y="-210997" z="-5681" heading="49654" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="120353" y="-211031" z="-5681" heading="44604" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="120295" y="-211158" z="-5681" heading="44604" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="120295" y="-211158" z="-5681" heading="44604" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="118273" y="-208858" z="-5681" heading="27931" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="118271" y="-208973" z="-5681" heading="49048" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="118271" y="-209060" z="-5681" heading="49048" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="118300" y="-209209" z="-5681" heading="51157" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="118300" y="-209209" z="-5681" heading="51157" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="118273" y="-209400" z="-5681" heading="47712" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="118265" y="-209461" z="-5681" heading="47712" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="118265" y="-209461" z="-5681" heading="50922" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="118289" y="-209601" z="-5681" heading="50922" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="118362" y="-209719" z="-5681" heading="54930" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="118362" y="-209719" z="-5681" heading="54930" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="118362" y="-209719" z="-5681" heading="54930" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="120062" y="-207667" z="-5681" heading="16054" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="119855" y="-207703" z="-5681" heading="34599" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="119876" y="-207700" z="-5681" heading="34599" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="119876" y="-207700" z="-5681" heading="20617" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="119821" y="-207572" z="-5683" heading="20617" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="119821" y="-207572" z="-5683" heading="20617" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="119592" y="-207635" z="-5681" heading="35568" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="119592" y="-207635" z="-5681" heading="35568" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="119458" y="-207669" z="-5681" heading="35359" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="119458" y="-207669" z="-5681" heading="35359" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="119581" y="-207832" z="-5683" heading="55894" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="119581" y="-207832" z="-5683" heading="55894" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="116634" y="-208776" z="-5681" heading="48815" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="116634" y="-208776" z="-5681" heading="48815" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="116568" y="-208921" z="-5681" heading="44696" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116538" y="-209070" z="-5681" heading="47100" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="116517" y="-209177" z="-5683" heading="47100" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116634" y="-209246" z="-5681" heading="59978" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="116634" y="-209246" z="-5681" heading="59978" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="116611" y="-209276" z="-5681" heading="42502" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="116514" y="-209408" z="-5683" heading="42502" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116620" y="-209460" z="-5681" heading="60759" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="116654" y="-209477" z="-5681" heading="60759" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116654" y="-209477" z="-5681" heading="60759" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="115340" y="-211007" z="-5681" heading="39642" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="115522" y="-211002" z="-5681" heading="286" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="115522" y="-211002" z="-5681" heading="286" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="115691" y="-211097" z="-5681" heading="60198" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="115725" y="-211116" z="-5683" heading="60198" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="115876" y="-211081" z="-5681" heading="2361" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="115929" y="-211069" z="-5681" heading="2361" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="116104" y="-211022" z="-5681" heading="2736" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="116104" y="-211022" z="-5681" heading="2736" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116170" y="-210982" z="-5681" heading="5636" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="116259" y="-210929" z="-5681" heading="5636" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116259" y="-210929" z="-5681" heading="5636" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="112937" y="-208547" z="-5681" heading="31628" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="112937" y="-208547" z="-5681" heading="31628" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="112833" y="-208429" z="-5683" heading="23919" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112721" y="-208542" z="-5681" heading="41041" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112706" y="-208558" z="-5681" heading="41041" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="112603" y="-208625" z="-5681" heading="38837" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="112592" y="-208633" z="-5681" heading="38837" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="112511" y="-208549" z="-5681" heading="24380" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="112461" y="-208497" z="-5681" heading="24380" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112307" y="-208559" z="-5681" heading="36760" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112307" y="-208559" z="-5681" heading="36760" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="112307" y="-208559" z="-5681" heading="36760" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="112079" y="-207542" z="-5681" heading="63360" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="112270" y="-207461" z="-5681" heading="4151" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="112255" y="-207468" z="-5681" heading="4151" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112411" y="-207545" z="-5681" heading="60753" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112411" y="-207545" z="-5681" heading="60753" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="112578" y="-207449" z="-5681" heading="5420" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="112619" y="-207426" z="-5683" heading="5420" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="112760" y="-207568" z="-5681" heading="57307" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="112762" y="-207570" z="-5681" heading="57307" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112894" y="-207503" z="-5681" heading="4899" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112894" y="-207503" z="-5681" heading="4899" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="112894" y="-207503" z="-5681" heading="4899" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="113621" y="-213055" z="-5681" heading="64089" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="113775" y="-213088" z="-5681" heading="63273" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="113807" y="-213096" z="-5681" heading="63273" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="113948" y="-213050" z="-5681" heading="3289" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="113948" y="-213050" z="-5681" heading="3289" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="114091" y="-213080" z="-5681" heading="63379" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="114091" y="-213080" z="-5681" heading="63379" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="114234" y="-213017" z="-5681" heading="4328" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="114234" y="-213017" z="-5681" heading="4328" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="114330" y="-213102" z="-5681" heading="57977" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="114330" y="-213102" z="-5681" heading="57977" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="114330" y="-213102" z="-5681" heading="57977" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="113250" y="-214026" z="-5681" heading="32832" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="113072" y="-213976" z="-5681" heading="29911" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="113072" y="-213976" z="-5681" heading="29911" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112961" y="-214051" z="-5681" heading="38965" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="112961" y="-214051" z="-5681" heading="38965" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112803" y="-214047" z="-5681" heading="32503" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="112803" y="-214047" z="-5681" heading="32503" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="112764" y="-214045" z="-5681" heading="32369" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="112636" y="-214040" z="-5681" heading="32369" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="112541" y="-213986" z="-5681" heading="27735" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="112541" y="-213986" z="-5681" heading="27735" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="112541" y="-213986" z="-5681" heading="27735" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="115799" y="-214400" z="-5681" heading="48920" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="115817" y="-214640" z="-5681" heading="52038" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="115844" y="-214735" z="-5681" heading="52038" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="115741" y="-214794" z="-5681" heading="38256" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="115699" y="-214818" z="-5681" heading="38256" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="115718" y="-214919" z="-5681" heading="50142" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="115718" y="-214919" z="-5681" heading="50142" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="115852" y="-215006" z="-5681" heading="59529" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="115852" y="-215006" z="-5681" heading="59529" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="115772" y="-215091" z="-5681" heading="41333" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="115731" y="-215136" z="-5681" heading="41333" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="115731" y="-215136" z="-5681" heading="41333" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="116662" y="-217537" z="-5681" heading="65" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="116842" y="-217577" z="-5681" heading="63255" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="116842" y="-217577" z="-5681" heading="63255" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116962" y="-217533" z="-5681" heading="3577" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="116954" y="-217537" z="-5681" heading="3577" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="117100" y="-217596" z="-5681" heading="61546" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="117128" y="-217607" z="-5681" heading="61546" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="117213" y="-217557" z="-5681" heading="5546" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="117213" y="-217557" z="-5681" heading="5546" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="117266" y="-217495" z="-5681" heading="8921" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="117286" y="-217473" z="-5681" heading="8921" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="117431" y="-217507" z="-5681" heading="63094" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="118966" y="-216567" z="-5681" heading="16601" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="118929" y="-216557" z="-5681" heading="30012" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="118854" y="-216536" z="-5681" heading="30012" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="118645" y="-216536" z="-5681" heading="35077" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="118605" y="-216545" z="-5681" heading="35077" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23832" x="118453" y="-216537" z="-5681" heading="31280" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23833" x="118413" y="-216531" z="-5681" heading="31280" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="118279" y="-216583" z="-5681" heading="39396" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="118279" y="-216583" z="-5681" heading="39396" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="118201" y="-216567" z="-5681" heading="30694" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="118140" y="-216555" z="-5681" heading="30694" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="118140" y="-216555" z="-5681" heading="30694" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="120209" y="-218247" z="-5681" heading="3709" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="120211" y="-218080" z="-5681" heading="16259" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="120211" y="-218080" z="-5681" heading="16259" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="120157" y="-218014" z="-5681" heading="23536" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="120157" y="-218014" z="-5681" heading="23536" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="120206" y="-217854" z="-5681" heading="13284" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="120206" y="-217854" z="-5681" heading="13284" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="120157" y="-217738" z="-5681" heading="20552" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="120157" y="-217738" z="-5681" heading="20552" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="120172" y="-217595" z="-5681" heading="15293" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="120172" y="-217595" z="-5681" heading="15293" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="120172" y="-217595" z="-5681" heading="15293" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23831" x="117523" y="-218555" z="-5681" heading="30763" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23831" x="117367" y="-218571" z="-5681" heading="33868" respawnTime="25sec" chaseRange="950" /> <!-- Lilim's Assassin -->
++			<npc id="23830" x="117353" y="-218573" z="-5681" heading="33868" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="117259" y="-218636" z="-5681" heading="38926" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23830" x="117259" y="-218636" z="-5681" heading="38926" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="117143" y="-218616" z="-5681" heading="31016" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23832" x="117082" y="-218606" z="-5681" heading="31016" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23832" x="117032" y="-218548" z="-5681" heading="23801" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Troop Knight -->
++			<npc id="23830" x="116953" y="-218457" z="-5681" heading="23801" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23830" x="116849" y="-218514" z="-5681" heading="40036" respawnTime="25sec" chaseRange="950" /> <!-- Lillim's Great Magus -->
++			<npc id="23833" x="116798" y="-218558" z="-5681" heading="40036" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++			<npc id="23833" x="116610" y="-218571" z="-5681" heading="33497" respawnTime="25sec" chaseRange="950" /> <!-- Risha's Follower -->
++		</group>
++	</spawnlist>
++</instance>
+\ No newline at end of file

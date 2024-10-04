@@ -1,0 +1,21 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_11.3_Shinemaker
+diff --git dist/game/data/teleporters/others/SessionZonesTeleporters.xml dist/game/data/teleporters/others/SessionZonesTeleporters.xml
+index 77dc55e..cf6391c 100644
+--- dist/game/data/teleporters/others/SessionZonesTeleporters.xml
++++ dist/game/data/teleporters/others/SessionZonesTeleporters.xml
+@@ -183,4 +183,13 @@
+ 			<location x="-147551" y="53504" z="-9522" /> <!-- Tower of Insolence (9th Floor) -->
+ 		</teleport>
+ 	</npc>
++		<!-- Rift of Time -->
++	<npc id="34694"> <!-- Gatekeeper Ziggurat -->
++		<teleport type="OTHER">
++			<location x="110217" y="-245613" z="-14809" /> <!-- (1st Floor 110) -->
++			<location x="109848" y="-217407" z="-15182" /> <!-- (2nd Floor 115) -->
++			<location x="109312" y="-251599" z="-6504" /> <!-- (3nd Floor 120) -->
++			<location x="109368" y="-212715" z="-5672" /> <!-- (4nd Floor 125) -->
++		</teleport>
++	</npc>
+ </list>
+\ No newline at end of file

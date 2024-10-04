@@ -1,0 +1,16 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_11.3_Shinemaker
+diff --git dist/game/data/scripts/instances/TimedHunting/34694.html dist/game/data/scripts/instances/TimedHunting/34694.html
+new file mode 100644
+index 0000000..14894a4
+--- /dev/null
++++ dist/game/data/scripts/instances/TimedHunting/34694.html
+@@ -0,0 +1,7 @@
++<html><body>Gatekeeper Ziggurat:<br>
++Select the place you wish to teleport to.<br>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h npc_%objectId%_teleport OTHER 0">Catacombs of Apostle (Lv.110 or higher) </Button>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h npc_%objectId%_teleport OTHER 1">The Patriot's Necropolis (Lv.115 or higher)</Button>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h npc_%objectId%_teleport OTHER 2">Catacombs of yhe Forbidden Path (Lv.120 or higher)</Button>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h npc_%objectId%_teleport OTHER 3">The Saint's Necropolis (Lv.125 or higher)</Button>
++</body></html>
+\ No newline at end of file
