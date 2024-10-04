@@ -19,7 +19,7 @@ index c5af0cb..3e6b564 100644
  	</zone>
 +		<zone id="16" name="Rift of Time">
 +		<enterLocation>110217,-245613,-14809</enterLocation>
-+		<initialTime>43200</initialTime> <!-- 12 hours -->
++		<initialTime>36000</initialTime> 
 +		<resetDelay>864000</resetDelay> 
 +		<maxAddedTime>0</maxAddedTime> 
 +		<remainRefillTime>0</remainRefillTime> 
